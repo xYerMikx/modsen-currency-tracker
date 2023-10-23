@@ -1,0 +1,10 @@
+@import "./reset.scss";
+@import "./fonts.scss";
+
+html,
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	font-size: 10px;
+	font-family: "Poppins";
+}
