@@ -1,4 +1,3 @@
-import React from "react"
 import {
 	Container,
 	Copyright,
@@ -6,7 +5,6 @@ import {
 	FooterLink,
 	FooterLinks,
 	FooterWrapper,
-	GradientText,
 	InfoText,
 	LinkBlock,
 	LinkBlockTitle,
@@ -14,6 +12,7 @@ import {
 } from "./styled"
 import Logo from "../Logo/Logo"
 import { footerLinks } from "../../constants/footerLinks"
+import GradientText from "../GradientText/GradientText"
 
 const Footer = () => {
 	return (

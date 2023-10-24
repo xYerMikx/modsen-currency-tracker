@@ -39,7 +39,6 @@ module.exports = (_, argv) => {
 					test: /\.(jpg|jpeg|png|svg)$/,
 					use: ["file-loader"],
 				},
-				{ test: /\.(woff|woff2|eot|ttf|otf)$/i, use: ["url-loader"] },
 			],
 		},
 		plugins: [

@@ -10,7 +10,7 @@ export const FooterWrapper = styled.footer`
 
 export const Container = styled.div`
 	display: flex;
-	align-items: start;
+	align-items: flex-start;
 	gap: 10rem;
 	margin-bottom: 5.5rem;
 `
@@ -30,17 +30,6 @@ export const FooterLinks = styled.ul`
 export const InfoText = styled.p`
 	margin-top: 3rem;
 	font-weight: ${(props) => props.theme.fontWeight.light};
-`
-
-export const GradientText = styled.span`
-	background: ${(props) => props.theme.gradientColor};
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-moz-background-clip: text;
-	-moz-text-fill-color: transparent;
-	margin-left: 1.5rem;
-	font-weight: ${(props) => props.theme.fontWeight.semiBold};
 `
 
 export const LinkBlock = styled.li``

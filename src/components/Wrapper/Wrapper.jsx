@@ -1,4 +1,3 @@
-import React from "react"
 import { WrapperContainer } from "./styled"
 
 const Wrapper = ({ children }) => {

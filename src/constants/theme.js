@@ -21,6 +21,8 @@ export const darkTheme = {
 	darkColor: "#898989",
 	lightGray: "#A7B2C3",
 	bgColor: "#030304",
+	backgroundGradient:
+		"linear-gradient(253deg, #121212 11.2%, rgba(36, 121, 64, 0.2) 92%)",
 }
 export const lightTheme = {
 	...commonTheme,
@@ -28,4 +30,6 @@ export const lightTheme = {
 	secondaryColor: "#010101",
 	darkColor: "#898989",
 	bgColor: "#ffffff",
+	backgroundGradient:
+		"linear-gradient(253deg, #ffffff 11.2%, rgba(36, 121, 64, 0.2) 92%)",
 }

@@ -1,4 +1,3 @@
-import React from "react"
 import { HeaderWrapper, Input, Label, LinksList, Switch } from "./styled"
 import { Link } from "react-router-dom"
 import { headerLinks } from "../../constants/headerLinks"

@@ -1,4 +1,3 @@
-import React from "react"
 import { Image } from "./styled"
 import logo from "../../assets/icons/logo.svg"
 
