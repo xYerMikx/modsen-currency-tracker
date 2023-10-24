@@ -6,9 +6,10 @@ import { darkTheme, lightTheme } from "../../constants/theme"
 import Header from "../Header/Header"
 import Wrapper from "../Wrapper/Wrapper"
 import Footer from "../Footer/Footer"
+import useLocalStorage from "../../hooks/useLocalStorage"
 
 const App = () => {
-	const [currentTheme, setCurrentTheme] = useState("dark")
+	const [currentTheme, setCurrentTheme] = useLocalStorage("theme", "dark")
 	return (
 		<ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>
 			<BrowserRouter>

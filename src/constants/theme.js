@@ -23,6 +23,7 @@ export const darkTheme = {
 	bgColor: "#030304",
 	backgroundGradient:
 		"linear-gradient(253deg, #121212 11.2%, rgba(36, 121, 64, 0.2) 92%)",
+	currentTheme: "dark",
 }
 export const lightTheme = {
 	...commonTheme,
@@ -32,4 +33,5 @@ export const lightTheme = {
 	bgColor: "#ffffff",
 	backgroundGradient:
 		"linear-gradient(253deg, #ffffff 11.2%, rgba(36, 121, 64, 0.2) 92%)",
+	currentTheme: "light",
 }

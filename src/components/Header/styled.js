@@ -18,17 +18,6 @@ const LinksList = styled.ul`
 	font-weight: ${(props) => props.theme.fontWeight.light};
 `
 
-const ButtonSwitch = styled.button`
-	border: none;
-	outline: none;
-	border: 1px solid ${(props) => props.theme.primaryColor};
-	background: none;
-	color: ${(props) => props.theme.primaryColor};
-	cursor: pointer;
-	border-radius: ${(props) => props.theme.borderRadius};
-	padding: 0.5rem 1.5rem;
-`
-
 const Label = styled.label`
 	display: flex;
 	align-items: center;
@@ -56,6 +45,11 @@ const Switch = styled.div`
 		border: 1px solid ${(props) => props.theme.primaryColor};
 		transform: translate(0, -50%);
 		transition: 300ms all;
+
+		transform: translate(
+			${(props) => (props.theme.currentTheme === "dark" ? "0rem" : "2.8rem")},
+			-50%
+		);
 	}
 `
 
@@ -67,9 +61,12 @@ const Input = styled.input`
 		background: ${(props) => props.theme.bgColor};
 
 		&:before {
-			transform: translate(2.8rem, -50%);
+			transform: translate(
+				${(props) => (props.theme.currentTheme === "dark" ? "0rem" : "2.8rem")},
+				-50%
+			);
 		}
 	}
 `
 
-export { HeaderWrapper, LinksList, ButtonSwitch, Label, Switch, Input }
+export { HeaderWrapper, LinksList, Label, Switch, Input }

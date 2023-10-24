@@ -13,13 +13,16 @@ import {
 import Logo from "../Logo/Logo"
 import { footerLinks } from "../../constants/footerLinks"
 import GradientText from "../GradientText/GradientText"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
 	return (
 		<FooterWrapper>
 			<Container>
 				<FooterInfo>
-					<Logo />
+					<Link to="/">
+						<Logo />
+					</Link>
 					<GradientText>Modsen Currency Tracker</GradientText>
 					<InfoText>
 						Since then, the company has grown organically to. Starsup is the world's
