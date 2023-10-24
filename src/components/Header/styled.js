@@ -45,20 +45,20 @@ const Switch = styled.div`
 	position: relative;
 	width: 6rem;
 	height: 3.2rem;
-	background: #b3b3b3;
+	background: ${(props) => props.theme.bgColor};
 	border-radius: 3.2rem;
-	padding: 0.4rem;
+	border: 1px solid ${(props) => props.theme.primaryColor};
 	transition: 300ms all;
 
 	&:before {
 		content: "";
 		position: absolute;
-		width: 2.8rem;
-		height: 2.8rem;
+		width: 3rem;
+		height: 3rem;
 		border-radius: 3.5rem;
 		top: 50%;
-		left: 0.4rem;
-		background: white;
+		background: ${(props) => props.theme.bgColor};
+		border: 1px solid ${(props) => props.theme.primaryColor};
 		transform: translate(0, -50%);
 		transition: 300ms all;
 	}
@@ -69,10 +69,10 @@ const Input = styled.input`
 	position: absolute;
 
 	&:checked + ${Switch} {
-		background: green;
+		background: ${(props) => props.theme.bgColor};
 
 		&:before {
-			transform: translate(2.6rem, -50%);
+			transform: translate(2.8rem, -50%);
 		}
 	}
 `
