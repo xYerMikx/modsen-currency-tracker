@@ -1,5 +1,6 @@
 const commonTheme = {
-	gradientColor: "linear-gradient(90deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%)",
+	gradientColor:
+		"-webkit-linear-gradient(90deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%)",
 	orange: "#FF971D",
 	fontSize: {
 		sm: "2rem",
@@ -13,7 +14,7 @@ const commonTheme = {
 	},
 	borderRadius: "0.8rem",
 }
-const darkTheme = {
+export const darkTheme = {
 	...commonTheme,
 	primaryColor: "#ffffff",
 	secondaryColor: "#d9d9d9",
@@ -21,11 +22,10 @@ const darkTheme = {
 	lightGray: "#A7B2C3",
 	bgColor: "#030304",
 }
-const lightTheme = {
+export const lightTheme = {
 	...commonTheme,
 	primaryColor: "#000000",
 	secondaryColor: "#010101",
 	darkColor: "#898989",
 	bgColor: "#ffffff",
 }
-export default { darkTheme, lightTheme }

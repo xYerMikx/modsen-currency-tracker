@@ -1,16 +1,8 @@
 import React from "react"
-import {
-	ButtonSwitch,
-	HeaderWrapper,
-	Input,
-	Label,
-	LinksList,
-	Logo,
-	Switch,
-} from "./styled"
-import logo from "../../assets/icons/logo.svg"
+import { HeaderWrapper, Input, Label, LinksList, Switch } from "./styled"
 import { Link } from "react-router-dom"
 import { headerLinks } from "../../constants/headerLinks"
+import Logo from "../Logo/Logo"
 
 const Header = ({ setCurrentTheme, currentTheme }) => {
 	const changeTheme = () => {
@@ -19,7 +11,7 @@ const Header = ({ setCurrentTheme, currentTheme }) => {
 	return (
 		<HeaderWrapper>
 			<Link to="/">
-				<Logo src={logo} />
+				<Logo />
 			</Link>
 			<LinksList>
 				{headerLinks.map((link, index) => {

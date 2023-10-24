@@ -8,11 +8,6 @@ const HeaderWrapper = styled.header`
 	justify-content: space-between;
 `
 
-const Logo = styled.img`
-	width: 4rem;
-	height: 4rem;
-`
-
 const LinksList = styled.ul`
 	display: flex;
 	align-items: center;
@@ -77,4 +72,4 @@ const Input = styled.input`
 	}
 `
 
-export { HeaderWrapper, Logo, LinksList, ButtonSwitch, Label, Switch, Input }
+export { HeaderWrapper, LinksList, ButtonSwitch, Label, Switch, Input }
