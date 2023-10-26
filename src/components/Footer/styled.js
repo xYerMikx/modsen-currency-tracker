@@ -40,7 +40,11 @@ export const LinkBlockTitle = styled.h4`
 `
 
 export const FooterLink = styled(Link)`
+	transition: all 0.2s linear;
 	color: ${(props) => props.theme.darkColor};
+	&:hover {
+		color: ${(props) => props.theme.primaryColor};
+	}
 `
 
 export const Copyright = styled.span`

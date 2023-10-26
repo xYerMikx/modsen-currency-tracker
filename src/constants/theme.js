@@ -21,6 +21,8 @@ export const darkTheme = {
 	darkColor: "#898989",
 	lightGray: "#A7B2C3",
 	bgColor: "#030304",
+	cardBgColor: "#202025",
+	borderColor: "#474747",
 	backgroundGradient:
 		"linear-gradient(253deg, #121212 11.2%, rgba(36, 121, 64, 0.2) 92%)",
 	currentTheme: "dark",
@@ -31,6 +33,8 @@ export const lightTheme = {
 	secondaryColor: "#010101",
 	darkColor: "#898989",
 	bgColor: "#ffffff",
+	cardBgColor: "#eeeeee",
+	borderColor: "#d8d8d8",
 	backgroundGradient:
 		"linear-gradient(253deg, #ffffff 11.2%, rgba(36, 121, 64, 0.2) 92%)",
 	currentTheme: "light",

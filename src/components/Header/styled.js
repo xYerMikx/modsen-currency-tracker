@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
-	padding: 3.2rem 9.6rem;
+	padding: 3.2rem 10rem;
 	background-color: ${(props) => props.theme.bgColor};
 	display: flex;
 	align-items: center;
@@ -16,6 +16,14 @@ const LinksList = styled.ul`
 	color: ${(props) => props.theme.primaryColor};
 	font-size: ${(props) => props.theme.fontSize.sm};
 	font-weight: ${(props) => props.theme.fontWeight.light};
+
+	& > li {
+		transition: all 0.2s linear;
+
+		&:hover {
+			color: ${(props) => props.theme.orange};
+		}
+	}
 `
 
 const Label = styled.label`

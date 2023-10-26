@@ -1,7 +1,7 @@
 import { HeaderWrapper, Input, Label, LinksList, Switch } from "./styled"
 import { Link } from "react-router-dom"
-import { headerLinks } from "../../constants/headerLinks"
-import Logo from "../Logo/Logo"
+import { headerLinks } from "@constants/headerLinks"
+import Logo from "@components/Logo/Logo"
 
 const Header = ({ setCurrentTheme, currentTheme }) => {
 	const changeTheme = () => {
@@ -15,9 +15,9 @@ const Header = ({ setCurrentTheme, currentTheme }) => {
 			<LinksList>
 				{headerLinks.map((link, index) => {
 					return (
-						<Link key={index} to={link.to}>
-							{link.name}
-						</Link>
+						<li key={index}>
+							<Link to={link.to}>{link.name}</Link>
+						</li>
 					)
 				})}
 			</LinksList>

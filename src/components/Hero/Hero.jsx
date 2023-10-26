@@ -7,8 +7,8 @@ import {
 	HeroTitle,
 	HeroWrapper,
 } from "./styled"
-import heroImage from "../../assets/images/main-bg.png"
-import GradientText from "../GradientText/GradientText"
+import heroImage from "@assets/images/main-bg.png"
+import GradientText from "@components/GradientText/GradientText"
 
 const Hero = () => {
 	return (
