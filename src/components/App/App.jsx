@@ -5,15 +5,16 @@ import { darkTheme, lightTheme } from "@constants/theme"
 import Header from "@components/Header/Header"
 import Wrapper from "@components/Wrapper/Wrapper"
 import Footer from "@components/Footer/Footer"
-import useLocalStorage from "@/hooks/useLocalStorage"
+import { useSelector } from "react-redux"
 
 const App = () => {
-	const [currentTheme, setCurrentTheme] = useLocalStorage("theme", "dark")
+	const currentTheme = useSelector((state) => state.theme)
+
 	return (
-		<ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>
+		<ThemeProvider theme={currentTheme.theme === "dark" ? darkTheme : lightTheme}>
 			<BrowserRouter>
 				<Wrapper>
-					<Header setCurrentTheme={setCurrentTheme} currentTheme={currentTheme} />
+					<Header />
 					<Routes>
 						{headerLinks.map((el, index) => {
 							return <Route key={index} element={el.element} path={el.to} />

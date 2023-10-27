@@ -7,31 +7,37 @@ import {
 	LastUpdatedText,
 	LastUpdatedWrapper,
 } from "./styled"
-import CurrencyList from "@components/CurrencyList/CurrencyList"
 import status from "@assets/icons/circle-status.svg"
 import { convertDate } from "@utils/convertDate"
 import StocksList from "@components/StocksList/StocksList"
+import Dropdown from "@components/Dropdown/Dropdown"
+import CurrencyList from "@components/CurrencyList/CurrencyList"
 
 const CurrencySection = () => {
 	const [values, setValues] = useState([])
+	const [codes, setCodes] = useState([])
 	const [lastUpdated, setLastUpdated] = useState("")
+	const [selectedOption, setSelectedOption] = useState("USD")
 
 	useEffect(() => {
 		const getCurrencyData = async () => {
 			try {
-				const { data } = await axios.get("/mockLatest.json")
-				const currencyValues = Object.values(data.data).map((el) =>
+				const { data } = await axios.get("/mockConversionBase.json")
+				const dataByBase = data.data.find((el) => el.base === selectedOption)
+				const currencyValues = Object.values(dataByBase.data).map((el) =>
 					(1 / el.value).toFixed(4),
 				)
+				const codesValues = Object.values(dataByBase.data).map((el) => el.code)
+				const date = convertDate(dataByBase.meta.last_updated_at)
 				setValues(currencyValues)
-				const date = convertDate(data.meta.last_updated_at)
+				setCodes(codesValues)
 				setLastUpdated(date)
 			} catch (e) {
 				console.error(e)
 			}
 		}
 		getCurrencyData()
-	}, [])
+	}, [selectedOption])
 
 	return (
 		<CurrencyWrapper>
@@ -39,10 +45,11 @@ const CurrencySection = () => {
 				<LastUpdatedStatus src={status} />
 				<LastUpdatedText>Last Updated at {lastUpdated}</LastUpdatedText>
 			</LastUpdatedWrapper>
+			<Dropdown setSelectedOption={setSelectedOption} selectedOption={selectedOption} />
 			<BlockTitle>Stocks</BlockTitle>
 			<StocksList />
 			<BlockTitle>Quotes</BlockTitle>
-			<CurrencyList values={values} />
+			<CurrencyList values={values} codes={codes} />
 		</CurrencyWrapper>
 	)
 }

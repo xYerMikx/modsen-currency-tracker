@@ -2,10 +2,14 @@ import { HeaderWrapper, Input, Label, LinksList, Switch } from "./styled"
 import { Link } from "react-router-dom"
 import { headerLinks } from "@constants/headerLinks"
 import Logo from "@components/Logo/Logo"
+import { useDispatch } from "react-redux"
+import { setTheme } from "../../store/slices/themeSlice"
 
-const Header = ({ setCurrentTheme, currentTheme }) => {
+const Header = () => {
+	const dispatch = useDispatch()
+
 	const changeTheme = () => {
-		setCurrentTheme(currentTheme === "dark" ? "light" : "dark")
+		dispatch(setTheme())
 	}
 	return (
 		<HeaderWrapper>

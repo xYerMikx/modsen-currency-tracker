@@ -60,6 +60,7 @@ export const ConversionInput = styled.input`
 `
 
 export const ConversionSelect = styled.select`
+	margin-left: 1rem;
 	padding: 0.8rem 0.5rem;
 	border-radius: ${(props) => props.theme.borderRadius};
 `

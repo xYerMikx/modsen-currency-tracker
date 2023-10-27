@@ -1,6 +1,6 @@
 import Card from "@components/Card/Card"
 
-const CurrencyCard = ({ imageSrc, name, amount, currency, isQuote = true }) => {
+const CurrencyCard = ({ imageSrc, name, amount, currency, isQuote = true, code }) => {
 	return (
 		<Card
 			name={name}
@@ -8,6 +8,7 @@ const CurrencyCard = ({ imageSrc, name, amount, currency, isQuote = true }) => {
 			amount={amount}
 			baseCurrency={currency}
 			isQuote={isQuote}
+			code={code}
 		/>
 	)
 }
