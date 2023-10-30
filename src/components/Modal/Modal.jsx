@@ -19,6 +19,7 @@ const Modal = ({ onClose, name, imageSrc, code }) => {
 	const [selectedBase, setSelectedBase] = useState(currentOptions[0])
 	const [convertedValue, setConvertedValue] = useState(0)
 	const [baseValueAmount, setBaseValueAmount] = useState(1)
+
 	const onSelectChange = (e) => {
 		setSelectedBase(e.target.value)
 	}
@@ -55,8 +56,9 @@ const Modal = ({ onClose, name, imageSrc, code }) => {
 				<ConversionWrapper>
 					<ConversionInput
 						type="number"
-						value={baseValueAmount}
+						value={Math.abs(baseValueAmount)}
 						onChange={changeValueAmount}
+						min={0}
 					/>
 					<p>=</p>
 					<div>

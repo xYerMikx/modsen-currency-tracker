@@ -1,0 +1,114 @@
+{
+	"features": [
+		{
+			"properties": {
+				"title": "Alfa Bank",
+				"description": "The best bank ever"
+			},
+			"geometry": {
+				"longitude": 27.43857,
+				"latitude": 53.907457
+			}
+		},
+		{
+			"properties": {
+				"title": "Белинвестбанк",
+				"description": "The worst bank ever"
+			},
+			"geometry": {
+				"longitude": 27.498544,
+				"latitude": 53.921047
+			}
+		},
+		{
+			"properties": {
+				"title": "Белагропромбанк",
+				"description": "Meh bank"
+			},
+			"geometry": {
+				"longitude": 27.49999,
+				"latitude": 53.893403
+			}
+		},
+		{
+			"properties": {
+				"title": "Alfa Bank",
+				"description": "The best bank ever"
+			},
+			"geometry": {
+				"longitude": 27.604126,
+				"latitude": 53.863701
+			}
+		},
+		{
+			"properties": {
+				"title": "ЬТА Банк",
+				"description": "Uhhhhh"
+			},
+			"geometry": {
+				"longitude": 27.603283,
+				"latitude": 53.86143
+			}
+		},
+		{
+			"properties": {
+				"title": "Alfa Bank",
+				"description": "The best bank ever in my life"
+			},
+			"geometry": {
+				"longitude": 27.571308,
+				"latitude": 53.912605
+			}
+		},
+		{
+			"properties": {
+				"title": "Приорбанк",
+				"description": "What the hell is this"
+			},
+			"geometry": {
+				"longitude": 27.557663,
+				"latitude": 53.920751
+			}
+		},
+		{
+			"properties": {
+				"title": "Сбербанк",
+				"description": "Kinda ok"
+			},
+			"geometry": {
+				"longitude": 27.606442,
+				"latitude": 53.898864
+			}
+		},
+		{
+			"properties": {
+				"title": "Alfa Bank",
+				"description": "The best bank ever in my life"
+			},
+			"geometry": {
+				"longitude": 27.569697,
+				"latitude": 53.843822
+			}
+		},
+		{
+			"properties": {
+				"title": "Белгазпромбанк",
+				"description": "Че это вообще"
+			},
+			"geometry": {
+				"longitude": 27.568551,
+				"latitude": 53.882558
+			}
+		},
+		{
+			"properties": {
+				"title": "МТБанк",
+				"description": "Это прикольчик"
+			},
+			"geometry": {
+				"longitude": 27.653974,
+				"latitude": 53.934325
+			}
+		}
+	]
+}
