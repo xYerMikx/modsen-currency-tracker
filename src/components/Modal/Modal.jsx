@@ -36,7 +36,7 @@ const Modal = ({ onClose, name, imageSrc, code }) => {
 	useEffect(() => {
 		const getData = async () => {
 			try {
-				const { data } = await axios.get("mockCurrencies.json")
+				const { data } = await axios.get(process.env.PUBLIC_URL + "/mockCurrencies.json")
 				const convertValue = data.data[selectedBase].value * baseValueAmount
 				setConvertedValue(convertValue.toFixed(4))
 			} catch (e) {

@@ -43,6 +43,7 @@ module.exports = {
 		new ESLintWebpackPlugin(),
 		new DefinePlugin({
 			"process.env": JSON.stringify(process.env),
+			"process.env.PUBLIC_URL": JSON.stringify(process.env.PUBLIC_URL),
 		}),
 	],
 	resolve: {
