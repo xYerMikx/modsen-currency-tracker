@@ -1,8 +1,8 @@
 import styled from "styled-components"
+import { mainContainerStyles } from "@/styles/commonStyles"
 
 export const ContactsWrapper = styled.main`
-	background-color: ${(props) => props.theme.bgColor};
-	flex-grow: 1;
+	${mainContainerStyles}
 	padding: 2.5rem 10rem;
 	gap: 2.5rem;
 	color: ${(props) => props.theme.primaryColor};

@@ -9,8 +9,7 @@ import {
 	Main,
 } from "./styled"
 import arrow from "@assets/icons/arrow-down.svg"
-
-const options = ["USD", "EUR", "CAD", "JPY"]
+import { options } from "../../constants/dropdownOptions"
 
 const Dropdown = ({ selectedOption, setSelectedOption }) => {
 	const [isOpen, setIsOpen] = useState(false)

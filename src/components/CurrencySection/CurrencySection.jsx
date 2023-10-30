@@ -49,7 +49,7 @@ const CurrencySection = () => {
 			<BlockTitle>Stocks</BlockTitle>
 			<StocksList />
 			<BlockTitle>Quotes</BlockTitle>
-			<CurrencyList values={values} codes={codes} />
+			<CurrencyList values={values} codes={codes} currency={selectedOption} />
 		</CurrencyWrapper>
 	)
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Map from "@/components/Map/Map"
 import { BankContainer } from "./styled"
+import Searchbar from "../../components/Searchbar/Searchbar"
 
 export default class BankCard extends Component {
 	constructor(props) {
@@ -13,7 +14,8 @@ export default class BankCard extends Component {
 		const { value } = this.state
 		return (
 			<BankContainer>
-				<Map />
+				<Searchbar />
+				{/* <Map /> */}
 			</BankContainer>
 		)
 	}

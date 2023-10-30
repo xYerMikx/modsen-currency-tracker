@@ -2,7 +2,7 @@ import { CurrencyContainer } from "./styled"
 import CurrencyCard from "@components/CurrencyCard/CurrencyCard"
 import { currencies } from "@constants/currencies"
 
-const CurrencyList = ({ values, codes }) => {
+const CurrencyList = ({ values, codes, currency }) => {
 	return (
 		<CurrencyContainer>
 			{currencies.map((item, index) => {
@@ -13,7 +13,7 @@ const CurrencyList = ({ values, codes }) => {
 						imageSrc={item.imageSrc}
 						amount={values[index]}
 						code={codes[index]}
-						currency="R$"
+						currency={currency}
 					/>
 				)
 			})}
