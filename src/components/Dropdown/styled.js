@@ -15,7 +15,7 @@ export const DropDownHeader = styled.div`
   justify-content: space-between;
   margin-bottom: 0.8rem;
   padding: 0.4rem 2rem 0.4rem 1rem;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.15);
   font-size: ${(props) => props.theme.fontSize.sm};
   color: ${(props) => props.theme.primaryColor};
   background: ${(props) => props.theme.bgColor};
@@ -24,7 +24,7 @@ export const DropDownHeader = styled.div`
 export const DropDownListContainer = styled.div`
   position: absolute;
   width: inherit;
-  z-index: 2;
+  z-index: ${(props) => props.theme.zIndex.two};
   max-height: 20rem;
   overflow: auto;
 `

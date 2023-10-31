@@ -1,12 +1,12 @@
-import USD from "@assets/icons/dollar.svg"
-import ARS from "@assets/icons/peso.svg"
-import CAD from "@assets/icons/canadian-dollar.svg"
-import JPY from "@assets/icons/yen.svg"
-import AUD from "@assets/icons/australian-dollar.svg"
-import CNY from "@assets/icons/won.svg"
-import EUR from "@assets/icons/euro.svg"
-import BTC from "@assets/icons/bitcoin.svg"
-import GBP from "@assets/icons/libra.svg"
+import AUD from "@/assets/icons/australian-dollar.svg"
+import BTC from "@/assets/icons/bitcoin.svg"
+import CAD from "@/assets/icons/canadian-dollar.svg"
+import USD from "@/assets/icons/dollar.svg"
+import EUR from "@/assets/icons/euro.svg"
+import GBP from "@/assets/icons/libra.svg"
+import ARS from "@/assets/icons/peso.svg"
+import CNY from "@/assets/icons/won.svg"
+import JPY from "@/assets/icons/yen.svg"
 
 export const currencies = [
   {

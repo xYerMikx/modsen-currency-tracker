@@ -2,18 +2,19 @@ import styled from "styled-components"
 
 export const HeroWrapper = styled.section`
   background-image: ${(props) => props.theme.backgroundGradient};
+  background-color: ${(props) => props.theme.bgColor};
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 98%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   padding: 3rem 0;
   gap: 1rem;
 `
 
 export const HeroInfo = styled.div`
-  margin-left: 5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

@@ -13,8 +13,8 @@ export const LastUpdatedText = styled.p`
 `
 
 export const LastUpdatedStatus = styled.img`
-  width: 60px;
-  height: 60px;
+  width: 6rem;
+  height: 6rem;
 `
 
 export const LastUpdatedWrapper = styled.div`

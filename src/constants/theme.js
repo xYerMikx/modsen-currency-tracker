@@ -3,6 +3,11 @@ const commonTheme = {
     "-webkit-linear-gradient(90deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%)",
   orange: "#FF971D",
   inputColor: "#1B2028",
+  zIndex: {
+    lowest: -1,
+    one: 1,
+    two: 2,
+  },
   fontSize: {
     sm: "2rem",
     md: "2.4rem",

@@ -1,5 +1,5 @@
-import bovespa from "@assets/icons/bovespa.svg"
-import ifix from "@assets/icons/ifix.svg"
+import bovespa from "@/assets/icons/bovespa.svg"
+import ifix from "@/assets/icons/ifix.svg"
 
 export const stocks = [
   {

@@ -1,7 +1,7 @@
-import BankCard from "@pages/BankCard/BankCard"
-import Contacts from "@pages/Contacts/Contacts"
-import Home from "@pages/Home/Home"
-import Timeline from "@pages/Timeline/Timeline"
+import BankCard from "@/pages/BankCard/BankCard"
+import Contacts from "@/pages/Contacts/Contacts"
+import Home from "@/pages/Home/Home"
+import Timeline from "@/pages/Timeline/Timeline"
 
 export const headerLinks = [
   { name: "Home", to: "/", element: <Home /> },

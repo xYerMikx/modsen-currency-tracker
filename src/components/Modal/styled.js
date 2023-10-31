@@ -28,7 +28,7 @@ export const CloseButton = styled.div`
   color: ${(props) => props.theme.primaryColor};
   background-color: ${(props) => props.theme.orange};
   border-radius: ${(props) => props.theme.borderRadius};
-  border: 1px solid ${(props) => props.theme.orange};
+  border: 0.1rem solid ${(props) => props.theme.orange};
   text-align: center;
   transition: all 0.2s linear;
 

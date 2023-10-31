@@ -7,8 +7,8 @@ import {
   SearchList,
   SearchItem,
 } from "./styled"
-import search from "@assets/icons/search.svg"
-import { currencies } from "../../constants/currencies"
+import search from "@/assets/icons/search.svg"
+import { currencies } from "@/constants/currencies"
 
 export default class Searchbar extends Component {
   constructor(props) {

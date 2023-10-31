@@ -3,6 +3,7 @@ import { MapContainer } from "./styled"
 import mapboxgl from "!mapbox-gl"
 import axios from "axios"
 import { currencies } from "../../constants/currencies"
+import { mapConfig } from "../../constants/mapConfig"
 
 export default class Map extends Component {
   constructor(props) {
@@ -19,16 +20,16 @@ export default class Map extends Component {
     const getBanksMap = (pos) => {
       this.map = new mapboxgl.Map({
         container: this.mapContainer.current,
-        style: "mapbox://styles/mapbox/streets-v12",
+        style: mapConfig.styles,
         center: [pos.coords.longitude, pos.coords.latitude],
-        zoom: 11,
-        accessToken: process.env.ACCESS_TOKEN_MAPBOX,
+        zoom: mapConfig.zoom,
+        accessToken: mapConfig.accessToken,
       })
 
       axios
         .get("/banks.json")
-        .then((data) => {
-          const features = data.data.features
+        .then(({ data }) => {
+          const features = data.features
           if (features.length > 0) {
             this.setState((prevState) => ({
               ...prevState,

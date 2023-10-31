@@ -4,12 +4,11 @@ import { HomeWrapper } from "./styled"
 import CurrencySection from "../../components/CurrencySection/CurrencySection"
 
 const Home = () => {
-	return (
-		<HomeWrapper>
-			<Hero />
-			<CurrencySection />
-		</HomeWrapper>
-	)
+  return (
+    <HomeWrapper>
+      <CurrencySection />
+    </HomeWrapper>
+  )
 }
 
 export default Home
