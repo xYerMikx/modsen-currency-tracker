@@ -36,7 +36,7 @@ export const HeroText = styled.p`
   max-width: 35rem;
   text-align: center;
   margin-top: 1rem;
-  line-height: 190%;
+  line-height: 3.8rem;
   font-weight: ${(props) => props.theme.fontWeight.light};
 `
 

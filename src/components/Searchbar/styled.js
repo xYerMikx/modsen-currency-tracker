@@ -56,7 +56,7 @@ export const IconButton = styled.button`
     height: 100%;
     border-radius: 50%;
     z-index: ${(props) => props.theme.zIndex.lowest};
-    background: #000;
+    background: ${(props) => props.theme.black};
     transform: scale(0.6);
     opacity: 0;
   }

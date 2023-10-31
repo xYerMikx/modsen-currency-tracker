@@ -8,6 +8,8 @@ import ARS from "@/assets/icons/peso.svg"
 import CNY from "@/assets/icons/won.svg"
 import JPY from "@/assets/icons/yen.svg"
 
+import { getCodes } from "../utils/getCodes"
+
 export const currencies = [
   {
     name: "Commercial Dollar",
@@ -55,3 +57,5 @@ export const currencies = [
     code: "GBP",
   },
 ]
+
+export const currenciesCodes = getCodes(currencies)

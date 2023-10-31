@@ -2,8 +2,8 @@ import React, { Component, createRef } from "react"
 import { MapContainer } from "./styled"
 import mapboxgl from "!mapbox-gl"
 import axios from "axios"
-import { currencies } from "../../constants/currencies"
-import { mapConfig } from "../../constants/mapConfig"
+import { currenciesCodes } from "@/constants/currencies"
+import { mapConfig } from "@/constants/mapConfig"
 
 export default class Map extends Component {
   constructor(props) {
@@ -14,35 +14,41 @@ export default class Map extends Component {
     this.state = {
       features: [],
     }
+    this.source = axios.CancelToken.source()
   }
 
   componentDidMount() {
     const getBanksMap = (pos) => {
-      this.map = new mapboxgl.Map({
-        container: this.mapContainer.current,
-        style: mapConfig.styles,
-        center: [pos.coords.longitude, pos.coords.latitude],
-        zoom: mapConfig.zoom,
-        accessToken: mapConfig.accessToken,
-      })
-
-      axios
-        .get("/banks.json")
-        .then(({ data }) => {
-          const features = data.features
-          if (features.length > 0) {
-            this.setState((prevState) => ({
-              ...prevState,
-              features,
-            }))
-          }
-          throw new Error("No banks")
-        })
-        .catch((e) => {
-          console.error(e)
+      if (this.mapContainer.current) {
+        this.map = new mapboxgl.Map({
+          container: this.mapContainer.current,
+          style: mapConfig.styles,
+          center: [pos.coords.longitude, pos.coords.latitude],
+          zoom: mapConfig.zoom,
+          accessToken: mapConfig.accessToken,
         })
 
-      this.map.addControl(new mapboxgl.NavigationControl(), "top-right")
+        axios
+          .get("/banks.json", { cancelToken: this.source.token })
+          .then(({ data }) => {
+            const features = data.features
+            if (features.length > 0) {
+              this.setState((prevState) => ({
+                ...prevState,
+                features,
+              }))
+            }
+            throw new Error("No banks")
+          })
+          .catch((e) => {
+            if (axios.isCancel(e)) {
+              console.error("Canceled rendering", e.message)
+            }
+            console.error(e)
+          })
+
+        this.map.addControl(new mapboxgl.NavigationControl(), "top-right")
+      }
     }
 
     const getUserLocation = () => {
@@ -55,8 +61,6 @@ export default class Map extends Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    const currenciesCodes = currencies.map((el) => el.code)
-
     return currenciesCodes.includes(nextProps.value) || nextProps.value === ""
   }
 
@@ -86,7 +90,10 @@ export default class Map extends Component {
   }
 
   componentWillUnmount() {
-    this.map?.remove()
+    this.source.cancel("Operation canceled by user")
+    if (this.mapContainer.current && this.map) {
+      this.map?.remove()
+    }
   }
   render() {
     return <MapContainer ref={this.mapContainer} />

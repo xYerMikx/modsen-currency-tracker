@@ -29,7 +29,7 @@ export const BlockTitle = styled.h2`
   padding-bottom: 2.4rem;
   margin-bottom: 5rem;
   margin-top: 10rem;
-  border-bottom: 1px solid ${(props) => props.theme.darkColor};
+  border-bottom: 0.1rem solid ${(props) => props.theme.darkColor};
   font-weight: ${(props) => props.theme.fontWeight.light};
   max-width: 40rem;
 `

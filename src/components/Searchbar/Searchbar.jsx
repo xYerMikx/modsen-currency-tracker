@@ -8,7 +8,7 @@ import {
   SearchItem,
 } from "./styled"
 import search from "@/assets/icons/search.svg"
-import { currencies } from "@/constants/currencies"
+import { currenciesCodes } from "@/constants/currencies"
 
 export default class Searchbar extends Component {
   constructor(props) {
@@ -41,7 +41,6 @@ export default class Searchbar extends Component {
   render() {
     const { value } = this.props
     const { isOpen } = this.state
-    const currenciesCodes = currencies.map((el) => el.code)
     return (
       <SearchContainer>
         <Label htmlFor="search">

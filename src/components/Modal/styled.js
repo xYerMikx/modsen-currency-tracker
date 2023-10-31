@@ -14,7 +14,7 @@ export const ModalOverlay = styled.div`
 export const ModalBox = styled.div`
   border-radius: ${(props) => props.theme.borderRadius};
   background: white;
-  padding: 20px;
+  padding: 2rem;
   min-width: 50rem;
   min-height: 20rem;
 `

@@ -9,13 +9,11 @@ import {
   ModalImage,
   ModalOverlay,
 } from "./styled"
-import { currencies } from "../../constants/currencies"
 import axios from "axios"
-
-const currenciesOptions = currencies.map((el) => el.code)
+import { currenciesCodes } from "@/constants/currencies"
 
 const Modal = ({ onClose, name, imageSrc, code }) => {
-  const currentOptions = currenciesOptions.filter((el) => el !== code)
+  const currentOptions = currenciesCodes.filter((el) => el !== code)
   const [selectedBase, setSelectedBase] = useState(currentOptions[0])
   const [convertedValue, setConvertedValue] = useState(0)
   const [baseValueAmount, setBaseValueAmount] = useState(1)

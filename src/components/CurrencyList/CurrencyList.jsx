@@ -5,12 +5,12 @@ import { currencies } from "@/constants/currencies"
 const CurrencyList = ({ values, codes, currency }) => {
   return (
     <CurrencyContainer>
-      {currencies.map((item, index) => {
+      {currencies.map(({ code, name, imageSrc }, index) => {
         return (
           <CurrencyCard
-            key={item.code}
-            name={item.name}
-            imageSrc={item.imageSrc}
+            key={code}
+            name={name}
+            imageSrc={imageSrc}
             amount={values[index]}
             code={codes[index]}
             currency={currency}
