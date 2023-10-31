@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const MapContainer = styled.div`
-	width: 100%;
-	height: 400px;
+  width: 100%;
+  height: 400px;
 
-	cursor: grab;
+  cursor: grab;
 `

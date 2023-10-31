@@ -9,49 +9,49 @@ import BTC from "@assets/icons/bitcoin.svg"
 import GBP from "@assets/icons/libra.svg"
 
 export const currencies = [
-	{
-		name: "Commercial Dollar",
-		imageSrc: USD,
-		code: "USD",
-	},
-	{
-		name: "Argentine Peso",
-		imageSrc: ARS,
-		code: "ARS",
-	},
-	{
-		name: "Canadian Dollar",
-		imageSrc: CAD,
-		code: "CAD",
-	},
-	{
-		name: "Yen",
-		imageSrc: JPY,
-		code: "JPY",
-	},
-	{
-		name: "Australian Dollar",
-		imageSrc: AUD,
-		code: "AUD",
-	},
-	{
-		name: "Yuan",
-		imageSrc: CNY,
-		code: "CNY",
-	},
-	{
-		name: "Euro",
-		imageSrc: EUR,
-		code: "EUR",
-	},
-	{
-		name: "Bitcoin",
-		imageSrc: BTC,
-		code: "BTC",
-	},
-	{
-		name: "Libra",
-		imageSrc: GBP,
-		code: "GBP",
-	},
+  {
+    name: "Commercial Dollar",
+    imageSrc: USD,
+    code: "USD",
+  },
+  {
+    name: "Argentine Peso",
+    imageSrc: ARS,
+    code: "ARS",
+  },
+  {
+    name: "Canadian Dollar",
+    imageSrc: CAD,
+    code: "CAD",
+  },
+  {
+    name: "Yen",
+    imageSrc: JPY,
+    code: "JPY",
+  },
+  {
+    name: "Australian Dollar",
+    imageSrc: AUD,
+    code: "AUD",
+  },
+  {
+    name: "Yuan",
+    imageSrc: CNY,
+    code: "CNY",
+  },
+  {
+    name: "Euro",
+    imageSrc: EUR,
+    code: "EUR",
+  },
+  {
+    name: "Bitcoin",
+    imageSrc: BTC,
+    code: "BTC",
+  },
+  {
+    name: "Libra",
+    imageSrc: GBP,
+    code: "GBP",
+  },
 ]

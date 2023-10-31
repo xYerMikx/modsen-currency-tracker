@@ -4,8 +4,8 @@ import Home from "@pages/Home/Home"
 import Timeline from "@pages/Timeline/Timeline"
 
 export const headerLinks = [
-	{ name: "Home", to: "/", element: <Home /> },
-	{ name: "Timeline", to: "/timeline", element: <Timeline /> },
-	{ name: "Bank card", to: "/bankcard", element: <BankCard /> },
-	{ name: "Contacts", to: "/contacts", element: <Contacts /> },
+  { name: "Home", to: "/", element: <Home /> },
+  { name: "Timeline", to: "/timeline", element: <Timeline /> },
+  { name: "Bank card", to: "/bankcard", element: <BankCard /> },
+  { name: "Contacts", to: "/contacts", element: <Contacts /> },
 ]

@@ -22,9 +22,7 @@ const CurrencySection = () => {
 	useEffect(() => {
 		const getCurrencyData = async () => {
 			try {
-				const { data } = await axios.get(
-					process.env.PUBLIC_URL + "/mockConversionBase.json",
-				)
+				const { data } = await axios.get("/mockConversionBase.json")
 				const dataByBase = data.data.find((el) => el.base === selectedOption)
 				const currencyValues = Object.values(dataByBase.data).map((el) =>
 					(1 / el.value).toFixed(4),
