@@ -23,7 +23,7 @@ export default class BankCard extends Component {
           <Title>Search currency in the bank</Title>
           <Searchbar value={value} setValue={this.setValue} />
         </BankWrapper>
-        {/* <Map value={value} /> */}
+        <Map value={value} />
       </BankContainer>
     )
   }

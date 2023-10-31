@@ -1,114 +1,125 @@
 {
-	"features": [
-		{
-			"properties": {
-				"title": "Alfa Bank",
-				"description": "The best bank ever"
-			},
-			"geometry": {
-				"longitude": 27.43857,
-				"latitude": 53.907457
-			}
-		},
-		{
-			"properties": {
-				"title": "Белинвестбанк",
-				"description": "The worst bank ever"
-			},
-			"geometry": {
-				"longitude": 27.498544,
-				"latitude": 53.921047
-			}
-		},
-		{
-			"properties": {
-				"title": "Белагропромбанк",
-				"description": "Meh bank"
-			},
-			"geometry": {
-				"longitude": 27.49999,
-				"latitude": 53.893403
-			}
-		},
-		{
-			"properties": {
-				"title": "Alfa Bank",
-				"description": "The best bank ever"
-			},
-			"geometry": {
-				"longitude": 27.604126,
-				"latitude": 53.863701
-			}
-		},
-		{
-			"properties": {
-				"title": "ЬТА Банк",
-				"description": "Uhhhhh"
-			},
-			"geometry": {
-				"longitude": 27.603283,
-				"latitude": 53.86143
-			}
-		},
-		{
-			"properties": {
-				"title": "Alfa Bank",
-				"description": "The best bank ever in my life"
-			},
-			"geometry": {
-				"longitude": 27.571308,
-				"latitude": 53.912605
-			}
-		},
-		{
-			"properties": {
-				"title": "Приорбанк",
-				"description": "What the hell is this"
-			},
-			"geometry": {
-				"longitude": 27.557663,
-				"latitude": 53.920751
-			}
-		},
-		{
-			"properties": {
-				"title": "Сбербанк",
-				"description": "Kinda ok"
-			},
-			"geometry": {
-				"longitude": 27.606442,
-				"latitude": 53.898864
-			}
-		},
-		{
-			"properties": {
-				"title": "Alfa Bank",
-				"description": "The best bank ever in my life"
-			},
-			"geometry": {
-				"longitude": 27.569697,
-				"latitude": 53.843822
-			}
-		},
-		{
-			"properties": {
-				"title": "Белгазпромбанк",
-				"description": "Че это вообще"
-			},
-			"geometry": {
-				"longitude": 27.568551,
-				"latitude": 53.882558
-			}
-		},
-		{
-			"properties": {
-				"title": "МТБанк",
-				"description": "Это прикольчик"
-			},
-			"geometry": {
-				"longitude": 27.653974,
-				"latitude": 53.934325
-			}
-		}
-	]
+  "features": [
+    {
+      "properties": {
+        "title": "Alfa Bank",
+        "description": "The best bank ever"
+      },
+      "geometry": {
+        "longitude": 27.43857,
+        "latitude": 53.907457
+      },
+      "currencies": ["USD", "EUR", "CNY", "AUD", "CAD", "JPY"]
+    },
+    {
+      "properties": {
+        "title": "Белинвестбанк",
+        "description": "The worst bank ever"
+      },
+      "geometry": {
+        "longitude": 27.498544,
+        "latitude": 53.921047
+      },
+      "currencies": ["USD", "EUR", "CNY", "AUD", "CAD", "ARS"]
+    },
+    {
+      "properties": {
+        "title": "Белагропромбанк",
+        "description": "Meh bank"
+      },
+      "geometry": {
+        "longitude": 27.49999,
+        "latitude": 53.893403
+      },
+      "currencies": ["USD", "EUR", "CNY", "GBP", "BTC", "AUD", "CAD", "JPY", "ARS"]
+    },
+    {
+      "properties": {
+        "title": "Alfa Bank",
+        "description": "The best bank ever"
+      },
+      "geometry": {
+        "longitude": 27.604126,
+        "latitude": 53.863701
+      },
+      "currencies": ["USD", "EUR", "CNY", "GBP", "AUD", "CAD", "JPY"]
+    },
+    {
+      "properties": {
+        "title": "ЬТА Банк",
+        "description": "Uhhhhh"
+      },
+      "geometry": {
+        "longitude": 27.603283,
+        "latitude": 53.86143
+      },
+      "currencies": ["USD", "EUR", "GBP"]
+    },
+    {
+      "properties": {
+        "title": "Alfa Bank",
+        "description": "The best bank ever in my life"
+      },
+      "geometry": {
+        "longitude": 27.571308,
+        "latitude": 53.912605
+      },
+      "currencies": ["USD", "EUR", "GBP", "AUD", "CAD"]
+    },
+    {
+      "properties": {
+        "title": "Приорбанк",
+        "description": "What the hell is this"
+      },
+      "geometry": {
+        "longitude": 27.557663,
+        "latitude": 53.920751
+      },
+      "currencies": ["CNY", "GBP", "BTC", "JPY", "ARS"]
+    },
+    {
+      "properties": {
+        "title": "Сбербанк",
+        "description": "Kinda ok"
+      },
+      "geometry": {
+        "longitude": 27.606442,
+        "latitude": 53.898864
+      },
+      "currencies": ["GBP", "BTC", "AUD"]
+    },
+    {
+      "properties": {
+        "title": "Alfa Bank",
+        "description": "The best bank ever in my life"
+      },
+      "geometry": {
+        "longitude": 27.569697,
+        "latitude": 53.843822
+      },
+      "currencies": ["USD", "EUR", "CNY", "CAD", "JPY", "ARS"]
+    },
+    {
+      "properties": {
+        "title": "Белгазпромбанк",
+        "description": "Че это вообще"
+      },
+      "geometry": {
+        "longitude": 27.568551,
+        "latitude": 53.882558
+      },
+      "currencies": ["USD", "EUR", "CNY", "CAD", "JPY", "ARS"]
+    },
+    {
+      "properties": {
+        "title": "МТБанк",
+        "description": "Это прикольчик"
+      },
+      "geometry": {
+        "longitude": 27.653974,
+        "latitude": 53.934325
+      },
+      "currencies": ["USD", "GBP", "BTC", "AUD", "CAD", "JPY", "ARS"]
+    }
+  ]
 }
