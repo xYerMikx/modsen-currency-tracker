@@ -20,9 +20,7 @@ const Header = () => {
         {headerLinks.map((link, index) => {
           return (
             <li key={index}>
-              <StyledLink to={link.to} activeClassName="active">
-                {link.name}
-              </StyledLink>
+              <StyledLink to={link.to}>{link.name}</StyledLink>
             </li>
           )
         })}

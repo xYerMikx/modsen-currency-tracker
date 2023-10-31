@@ -75,6 +75,7 @@ export const SearchList = styled.ul`
   overflow: auto;
   font-size: 1.6rem;
   height: auto;
+  z-index: ${(props) => props.theme.zIndex.two};
 `
 
 export const SearchItem = styled.li`

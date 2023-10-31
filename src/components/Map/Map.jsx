@@ -37,8 +37,9 @@ export default class Map extends Component {
                 ...prevState,
                 features,
               }))
+            } else {
+              throw new Error("No banks")
             }
-            throw new Error("No banks")
           })
           .catch((e) => {
             if (axios.isCancel(e)) {
@@ -52,9 +53,19 @@ export default class Map extends Component {
     }
 
     const getUserLocation = () => {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(getBanksMap)
+      const position = {
+        coords: {
+          latitude: 53.893009,
+          longitude: 27.567444,
+        },
       }
+      navigator.permissions.query({ name: "geolocation" }).then((result) => {
+        if (result.state === "granted") {
+          navigator.geolocation.getCurrentPosition(getBanksMap)
+        } else {
+          getBanksMap(position)
+        }
+      })
     }
 
     getUserLocation()
