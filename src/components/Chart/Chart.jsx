@@ -56,11 +56,13 @@ export class ChartComponent extends Component {
   getDataForChartConfig() {
     const configData = chartConfig.data
     const { data } = this.state
+    const { formData } = this.props
+
     return {
       datasets: [
         {
           label: configData.datasets[0].label,
-          data,
+          data: formData.length < 1 ? data : formData,
           backgroundColor: configData.datasets[0].backgroundColor,
         },
       ],
