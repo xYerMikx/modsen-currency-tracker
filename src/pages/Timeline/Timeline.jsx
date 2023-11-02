@@ -9,6 +9,7 @@ import {
 } from "./styled"
 import { Dropdown } from "@/components/Dropdown/Dropdown"
 import { currencies, currenciesCodes } from "@/constants/currencies"
+import { ChartComponent } from "@/components/Chart/Chart"
 
 export const Timeline = () => {
   const [selectedOption, setSelectedOption] = useState("USD")
@@ -28,6 +29,7 @@ export const Timeline = () => {
           <CurrencyCode>{selectedCurrency.code}</CurrencyCode>
         </CurrencyInfo>
       </SelectedCurrencyWrapper>
+      <ChartComponent selectedOption={selectedOption} />
     </TimelineContainer>
   )
 }
