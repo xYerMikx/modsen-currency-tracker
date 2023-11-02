@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const { HotModuleReplacementPlugin, DefinePlugin } = require("webpack")
 const ESLintWebpackPlugin = require("eslint-webpack-plugin")
 const dotenv = require("dotenv")
+const CopyPlugin = require("copy-webpack-plugin")
 
 dotenv.config()
 
@@ -44,6 +45,11 @@ module.exports = {
     new DefinePlugin({
       "process.env": JSON.stringify(process.env),
       "process.env.PUBLIC_URL": JSON.stringify(process.env.PUBLIC_URL),
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "public/mockServiceWorker.js", to: path.resolve(__dirname, "dist") },
+      ],
     }),
   ],
   resolve: {

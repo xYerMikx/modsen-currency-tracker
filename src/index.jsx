@@ -7,7 +7,11 @@ const rootElement = ReactDOM.createRoot(document.getElementById("app"))
 async function deferRender() {
   const { worker } = await import("./mocks/browser")
 
-  return worker.start()
+  return worker.start({
+    findWorker(scriptUrl, mockServiceWorkerUrl) {
+      return scriptUrl.includes("mockServiceWorker")
+    },
+  })
 }
 
 deferRender().then(() => {
