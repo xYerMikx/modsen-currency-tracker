@@ -7,7 +7,7 @@ export const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: ${(props) => props.theme.paddings.xxs};
+  padding-left: ${(props) => props.theme.spacings.xxxs};
   transition: all 0.3s linear;
 `
 
@@ -17,7 +17,7 @@ export const Label = styled.label`
 `
 
 export const SearchInput = styled.input`
-  padding-left: ${(props) => props.theme.paddings.md};
+  padding-left: ${(props) => props.theme.spacings.sm};
   border: none;
   color: ${(props) => props.theme.primaryColor};
   position: absolute;
@@ -80,7 +80,7 @@ export const SearchList = styled.ul`
 
 export const SearchItem = styled.li`
   cursor: pointer;
-  padding: ${(props) => props.theme.paddings.sm} ${(props) => props.theme.paddings.md};
+  padding: ${(props) => props.theme.spacings.xs} ${(props) => props.theme.spacings.sm};
   transition: all 0.2s linear;
 
   &:hover {

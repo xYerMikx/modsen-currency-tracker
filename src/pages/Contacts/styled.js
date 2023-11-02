@@ -4,7 +4,7 @@ import { mainContainerStyles } from "@/styles/commonStyles"
 
 export const ContactsWrapper = styled.main`
   ${mainContainerStyles}
-  padding:  ${(props) => props.theme.paddings.md}  ${(props) => props.theme.paddings.xxl};
+  padding:  ${(props) => props.theme.spacings.sm}  ${(props) => props.theme.spacings.xl};
   gap: 2.5rem;
   color: ${(props) => props.theme.primaryColor};
 `
@@ -25,11 +25,11 @@ export const LinksWrapper = styled.ul`
 export const ProfileImage = styled.img`
   border-radius: ${(props) => props.theme.borderRadius};
   max-width: 15rem;
-  margin-right: ${(props) => props.theme.margins.md};
+  margin-right: ${(props) => props.theme.spacings.md};
 `
 
 export const EmailText = styled.p`
-  margin-top: ${(props) => props.theme.margins.xxmd};
+  margin-top: ${(props) => props.theme.spacings.xxmd};
   font-size: ${(props) => props.theme.fontSize.md};
 `
 

@@ -29,7 +29,7 @@ export class Map extends Component {
         })
 
         axios
-          .get("/banks.json", { cancelToken: this.source.token })
+          .get("/banks", { cancelToken: this.source.token })
           .then(({ data }) => {
             const features = data.features
             if (features.length > 0) {

@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const CardWrapper = styled.div`
   display: flex;
   background-color: ${(props) => props.theme.cardBgColor};
-  padding: ${(props) => props.theme.paddings.lg};
+  padding: ${(props) => props.theme.spacings.md};
   border-radius: ${(props) => props.theme.borderRadius};
   border: 0.1rem solid ${(props) => props.theme.borderColor};
   gap: 3rem;

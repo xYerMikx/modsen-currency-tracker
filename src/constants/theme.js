@@ -4,16 +4,8 @@ const commonTheme = {
   orange: "#FF971D",
   inputColor: "#1B2028",
   black: "#000000",
-  paddings: {
-    xxs: "0.5rem",
-    xs: "0.8rem",
-    sm: "1rem",
-    md: "2rem",
-    lg: "3.2rem",
-    xl: "5rem",
-    xxl: "10rem",
-  },
-  margins: {
+  spacings: {
+    xxxs: "0.5rem",
     xxs: "0.8rem",
     xs: "1rem",
     sm: "2rem",

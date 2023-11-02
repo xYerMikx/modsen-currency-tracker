@@ -5,5 +5,5 @@ export const StocksContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 5rem;
-  margin-bottom: ${(props) => props.theme.margins.xxmd};
+  margin-bottom: ${(props) => props.theme.spacings.xxmd};
 `

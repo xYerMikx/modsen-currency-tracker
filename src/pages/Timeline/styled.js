@@ -5,20 +5,20 @@ import { mainContainerStyles } from "@/styles/commonStyles"
 export const TimelineContainer = styled.main`
   ${mainContainerStyles}
   font-size: ${(props) => props.theme.fontSize.sm};
-  padding: ${(props) => props.theme.paddings.xxl};
+  padding: ${(props) => props.theme.spacings.xl};
 
   color: ${(props) => props.theme.primaryColor};
 `
 
 export const SelectedCurrencyWrapper = styled.div`
-  margin-top: ${(props) => props.theme.margins.xxl};
-  margin-bottom: ${(props) => props.theme.margins.lg};
+  margin-top: ${(props) => props.theme.spacings.xxl};
+  margin-bottom: ${(props) => props.theme.spacings.lg};
   display: flex;
   gap: 2.6rem;
 `
 
 export const CurrencyInfo = styled.div`
-  padding: ${(props) => props.theme.paddings.xxs} 0;
+  padding: ${(props) => props.theme.spacings.xxxs} 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

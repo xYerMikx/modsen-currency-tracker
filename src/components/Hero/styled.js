@@ -10,7 +10,7 @@ export const HeroWrapper = styled.section`
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  padding: ${(props) => props.theme.paddings.lg} 0;
+  padding: ${(props) => props.theme.spacings.xxmd} 0;
   gap: 1rem;
 `
 
@@ -21,12 +21,12 @@ export const HeroInfo = styled.div`
 `
 
 export const HeroTitle = styled.h1`
-  margin-right: ${(props) => props.theme.margins.xxmd};
+  margin-right: ${(props) => props.theme.spacings.xxmd};
   font-size: 6.4rem;
 `
 
 export const HeroLowerTitle = styled.h2`
-  margin-right: ${(props) => props.theme.margins.xmd};
+  margin-right: ${(props) => props.theme.spacings.xmd};
   font-size: 7.4rem;
 `
 
@@ -35,7 +35,7 @@ export const HeroText = styled.p`
   font-size: ${(props) => props.theme.fontSize.sm};
   max-width: 35rem;
   text-align: center;
-  margin-top: ${(props) => props.theme.margins.xs};
+  margin-top: ${(props) => props.theme.spacings.xs};
   line-height: 3.8rem;
   font-weight: ${(props) => props.theme.fontWeight.light};
 `

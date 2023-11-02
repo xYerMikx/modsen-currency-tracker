@@ -12,7 +12,7 @@ import { currencies, currenciesCodes } from "@/constants/currencies"
 
 export const Timeline = () => {
   const [selectedOption, setSelectedOption] = useState("USD")
-  const selectedCurrency = currencies.find((el) => el.code === selectedOption)
+  const selectedCurrency = currencies.find(({ code }) => code === selectedOption)
 
   return (
     <TimelineContainer>

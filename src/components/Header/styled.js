@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 import styled from "styled-components"
 
 export const HeaderWrapper = styled.header`
-  padding: ${(props) => props.theme.paddings.lg} ${(props) => props.theme.paddings.xxl};
+  padding: ${(props) => props.theme.spacings.md} ${(props) => props.theme.spacings.xl};
   background-color: ${(props) => props.theme.bgColor};
   display: flex;
   align-items: center;
