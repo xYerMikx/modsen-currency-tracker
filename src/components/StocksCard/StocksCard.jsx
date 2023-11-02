@@ -1,6 +1,12 @@
-import Card from "@/components/Card/Card"
+import { Card } from "@/components/Card/Card"
 
-const StocksCard = ({ imageSrc, name, percent, currency = null, isQuote = false }) => {
+export const StocksCard = ({
+  imageSrc,
+  name,
+  percent,
+  currency = null,
+  isQuote = false,
+}) => {
   return (
     <Card
       name={name}
@@ -11,5 +17,3 @@ const StocksCard = ({ imageSrc, name, percent, currency = null, isQuote = false 
     />
   )
 }
-
-export default StocksCard

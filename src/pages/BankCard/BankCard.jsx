@@ -1,9 +1,9 @@
-import React, { Component } from "react"
-import Map from "@/components/Map/Map"
+import { Component } from "react"
+import { Map } from "@/components/Map/Map"
 import { BankContainer, BankWrapper, Title } from "./styled"
-import Searchbar from "../../components/Searchbar/Searchbar"
+import { Searchbar } from "@/components/Searchbar/Searchbar"
 
-export default class BankCard extends Component {
+export class BankCard extends Component {
   constructor(props) {
     super(props)
     this.state = {

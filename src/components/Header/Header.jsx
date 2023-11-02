@@ -1,11 +1,11 @@
 import { HeaderWrapper, Input, Label, LinksList, StyledLink, Switch } from "./styled"
 import { Link } from "react-router-dom"
 import { headerLinks } from "@/constants/headerLinks"
-import Logo from "@/components/Logo/Logo"
+import { Logo } from "@/components/Logo/Logo"
 import { useDispatch } from "react-redux"
 import { setTheme } from "@/store/slices/themeSlice"
 
-const Header = () => {
+export const Header = () => {
   const dispatch = useDispatch()
 
   const changeTheme = () => {
@@ -17,10 +17,10 @@ const Header = () => {
         <Logo />
       </Link>
       <LinksList>
-        {headerLinks.map((link, index) => {
+        {headerLinks.map(({ to, name }, index) => {
           return (
             <li key={index}>
-              <StyledLink to={link.to}>{link.name}</StyledLink>
+              <StyledLink to={to}>{name}</StyledLink>
             </li>
           )
         })}
@@ -32,5 +32,3 @@ const Header = () => {
     </HeaderWrapper>
   )
 }
-
-export default Header

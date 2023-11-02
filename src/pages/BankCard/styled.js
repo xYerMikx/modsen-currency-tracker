@@ -10,11 +10,11 @@ export const Title = styled.h2`
   color: ${(props) => props.theme.primaryColor};
   font-size: ${(props) => props.theme.fontSize.lg};
   text-align: center;
-  margin: 0 auto 2.4rem auto;
+  margin: 0 auto ${(props) => props.theme.margins.sm} auto;
 `
 
 export const BankWrapper = styled.div`
-  padding: 5rem;
+  padding: ${(props) => props.theme.paddings.xl};
   display: flex;
   align-items: center;
   flex-direction: column;

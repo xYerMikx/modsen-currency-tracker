@@ -14,7 +14,7 @@ export const ModalOverlay = styled.div`
 export const ModalBox = styled.div`
   border-radius: ${(props) => props.theme.borderRadius};
   background: white;
-  padding: 2rem;
+  padding: ${(props) => props.theme.paddings.md};
   min-width: 50rem;
   min-height: 20rem;
 `
@@ -22,8 +22,8 @@ export const ModalBox = styled.div`
 export const CloseButton = styled.div`
   cursor: pointer;
   max-width: 15rem;
-  padding: 0.5rem 1rem;
-  margin-top: 2rem;
+  padding: ${(props) => props.theme.paddings.xxs} ${(props) => props.theme.paddings.sm};
+  margin-top: ${(props) => props.theme.margins.sm};
   font-size: ${(props) => props.theme.fontSize.sm};
   color: ${(props) => props.theme.primaryColor};
   background-color: ${(props) => props.theme.orange};
@@ -44,7 +44,7 @@ export const InfoWrapper = styled.div`
   align-items: center;
   gap: 1rem;
   font-size: ${(props) => props.theme.fontSize.sm};
-  margin-bottom: 1.5rem;
+  margin-bottom: ${(props) => props.theme.margins.sm};
 `
 
 export const ConversionWrapper = styled.div`
@@ -55,12 +55,12 @@ export const ConversionWrapper = styled.div`
   font-size: ${(props) => props.theme.fontSize.sm};
 `
 export const ConversionInput = styled.input`
-  padding: 0.8rem 0.5rem;
+  padding: ${(props) => props.theme.paddings.xs} ${(props) => props.theme.paddings.xxs};
   border-radius: ${(props) => props.theme.borderRadius};
 `
 
 export const ConversionSelect = styled.select`
-  margin-left: 1rem;
-  padding: 0.8rem 0.5rem;
+  margin-left: ${(props) => props.theme.margins.xs};
+  padding: ${(props) => props.theme.paddings.xs} ${(props) => props.theme.paddings.xxs};
   border-radius: ${(props) => props.theme.borderRadius};
 `

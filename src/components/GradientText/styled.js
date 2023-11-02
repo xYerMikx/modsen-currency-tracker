@@ -7,6 +7,6 @@ export const GradientWrapper = styled.div`
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  margin-left: 1.5rem;
+  margin-left: ${(props) => props.theme.margins.sm};
   font-weight: ${(props) => props.theme.fontWeight.semiBold};
 `

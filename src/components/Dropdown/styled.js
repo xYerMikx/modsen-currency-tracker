@@ -13,8 +13,9 @@ export const DropDownContainer = styled.div`
 export const DropDownHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.8rem;
-  padding: 0.4rem 2rem 0.4rem 1rem;
+  margin-bottom: ${(props) => props.theme.margins.xxs};
+  padding: ${(props) => props.theme.paddings.xxs} ${(props) => props.theme.paddings.md}
+    ${(props) => props.theme.paddings.xxs} ${(props) => props.theme.paddings.sm};
   box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.15);
   font-size: ${(props) => props.theme.fontSize.sm};
   color: ${(props) => props.theme.primaryColor};
@@ -35,14 +36,14 @@ export const ArrowIcon = styled.img`
 `
 
 export const DropDownList = styled.ul`
-  padding: 1.2rem 1rem;
+  padding: ${(props) => props.theme.paddings.sm};
   background-color: ${(props) => props.theme.bgColor};
   font-size: ${(props) => props.theme.fontSize.sm};
 `
 
 export const ListItem = styled.li`
   color: ${(props) => props.theme.primaryColor};
-  margin-bottom: 0.8rem;
+  margin-bottom: ${(props) => props.theme.margins.xxs};
   transition: all 0.2s linear;
 
   &:hover {

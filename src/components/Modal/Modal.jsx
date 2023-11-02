@@ -12,7 +12,7 @@ import {
 import axios from "axios"
 import { currenciesCodes } from "@/constants/currencies"
 
-const Modal = ({ onClose, name, imageSrc, code }) => {
+export const Modal = ({ onClose, name, imageSrc, code }) => {
   const currentOptions = currenciesCodes.filter((el) => el !== code)
   const [selectedBase, setSelectedBase] = useState(currentOptions[0])
   const [convertedValue, setConvertedValue] = useState(0)
@@ -77,5 +77,3 @@ const Modal = ({ onClose, name, imageSrc, code }) => {
     </ModalOverlay>
   )
 }
-
-export default Modal

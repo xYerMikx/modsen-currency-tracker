@@ -1,11 +1,11 @@
-import React, { Component, createRef } from "react"
+import { Component, createRef } from "react"
 import { MapContainer } from "./styled"
 import mapboxgl from "!mapbox-gl"
 import axios from "axios"
 import { currenciesCodes } from "@/constants/currencies"
 import { mapConfig } from "@/constants/mapConfig"
 
-export default class Map extends Component {
+export class Map extends Component {
   constructor(props) {
     super(props)
     this.mapContainer = createRef()

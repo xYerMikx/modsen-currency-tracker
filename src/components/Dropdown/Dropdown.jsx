@@ -9,9 +9,8 @@ import {
   Main,
 } from "./styled"
 import arrow from "@/assets/icons/arrow-down.svg"
-import { options } from "@/constants/dropdownOptions"
 
-const Dropdown = ({ selectedOption, setSelectedOption }) => {
+export const Dropdown = ({ selectedOption, setSelectedOption, options }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggling = () => setIsOpen(!isOpen)

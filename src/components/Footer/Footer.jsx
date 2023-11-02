@@ -10,12 +10,12 @@ import {
   LinkBlockTitle,
   LinksContainer,
 } from "./styled"
-import Logo from "@/components/Logo/Logo"
+import { Logo } from "@/components/Logo/Logo"
 import { footerLinks } from "@/constants/footerLinks"
-import GradientText from "@/components/GradientText/GradientText"
+import { GradientText } from "@/components/GradientText/GradientText"
 import { Link } from "react-router-dom"
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <FooterWrapper>
       <Container>
@@ -47,5 +47,3 @@ const Footer = () => {
     </FooterWrapper>
   )
 }
-
-export default Footer

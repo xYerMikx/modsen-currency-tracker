@@ -1,4 +1,3 @@
-import React from "react"
 import {
   HeroImage,
   HeroInfo,
@@ -8,9 +7,9 @@ import {
   HeroWrapper,
 } from "./styled"
 import heroImage from "@/assets/images/main-bg.png"
-import GradientText from "@/components/GradientText/GradientText"
+import { GradientText } from "@/components/GradientText/GradientText"
 
-const Hero = () => {
+export const Hero = () => {
   return (
     <HeroWrapper>
       <HeroInfo>
@@ -26,5 +25,3 @@ const Hero = () => {
     </HeroWrapper>
   )
 }
-
-export default Hero

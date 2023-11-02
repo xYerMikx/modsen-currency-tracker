@@ -1,6 +1,13 @@
-import Card from "@/components/Card/Card"
+import { Card } from "@/components/Card/Card"
 
-const CurrencyCard = ({ imageSrc, name, amount, currency, isQuote = true, code }) => {
+export const CurrencyCard = ({
+  imageSrc,
+  name,
+  amount,
+  currency,
+  isQuote = true,
+  code,
+}) => {
   return (
     <Card
       name={name}
@@ -12,5 +19,3 @@ const CurrencyCard = ({ imageSrc, name, amount, currency, isQuote = true, code }
     />
   )
 }
-
-export default CurrencyCard

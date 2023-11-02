@@ -9,7 +9,7 @@ import {
 } from "./styled"
 import profile from "@/assets/images/profile.jpg"
 
-const Contacts = () => {
+export const Contacts = () => {
   return (
     <ContactsWrapper>
       <Flex>
@@ -30,5 +30,3 @@ const Contacts = () => {
     </ContactsWrapper>
   )
 }
-
-export default Contacts

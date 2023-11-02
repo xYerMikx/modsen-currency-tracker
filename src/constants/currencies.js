@@ -7,8 +7,7 @@ import GBP from "@/assets/icons/libra.svg"
 import ARS from "@/assets/icons/peso.svg"
 import CNY from "@/assets/icons/won.svg"
 import JPY from "@/assets/icons/yen.svg"
-
-import { getCodes } from "../utils/getCodes"
+import { getCodes } from "@/utils/getCodes"
 
 export const currencies = [
   {

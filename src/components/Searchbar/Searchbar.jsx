@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react"
+import { Component, createRef } from "react"
 import {
   IconButton,
   SearchContainer,
@@ -10,7 +10,7 @@ import {
 import search from "@/assets/icons/search.svg"
 import { currenciesCodes } from "@/constants/currencies"
 
-export default class Searchbar extends Component {
+export class Searchbar extends Component {
   constructor(props) {
     super(props)
     this.inputRef = createRef()

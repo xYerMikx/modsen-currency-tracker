@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client"
 import "mapbox-gl/dist/mapbox-gl.css"
-import Main from "@/components/Main/Main"
+import { Main } from "@/components/Main/Main"
 
 const rootElement = ReactDOM.createRoot(document.getElementById("app"))
 
@@ -19,5 +19,3 @@ async function deferRender() {
 deferRender().then(() => {
   rootElement.render(<Main />)
 })
-
-// ReactDOM.createRoot().render(<Main />)

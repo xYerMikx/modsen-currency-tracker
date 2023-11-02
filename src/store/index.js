@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit"
+import { combineReducers, configureStore } from "@reduxjs/toolkit"
 import {
   FLUSH,
   PAUSE,
@@ -18,12 +18,14 @@ const persistConfig = {
   storage,
 }
 
-const persistedThemeReducer = persistReducer(persistConfig, themeReducer)
+const rootReducer = combineReducers({
+  theme: themeReducer,
+})
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 const store = configureStore({
-  reducer: {
-    theme: persistedThemeReducer,
-  },
+  reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

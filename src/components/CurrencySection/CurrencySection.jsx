@@ -9,11 +9,12 @@ import {
 } from "./styled"
 import status from "@/assets/icons/circle-status.svg"
 import { convertDate } from "@/utils/convertDate"
-import StocksList from "@/components/StocksList/StocksList"
-import Dropdown from "@/components/Dropdown/Dropdown"
-import CurrencyList from "@/components/CurrencyList/CurrencyList"
+import { StocksList } from "@/components/StocksList/StocksList"
+import { Dropdown } from "@/components/Dropdown/Dropdown"
+import { CurrencyList } from "@/components/CurrencyList/CurrencyList"
+import { options } from "@/constants/dropdownOptions"
 
-const CurrencySection = () => {
+export const CurrencySection = () => {
   const [values, setValues] = useState([])
   const [codes, setCodes] = useState([])
   const [lastUpdated, setLastUpdated] = useState("")
@@ -45,7 +46,11 @@ const CurrencySection = () => {
         <LastUpdatedStatus src={status} />
         <LastUpdatedText>Last Updated at {lastUpdated}</LastUpdatedText>
       </LastUpdatedWrapper>
-      <Dropdown setSelectedOption={setSelectedOption} selectedOption={selectedOption} />
+      <Dropdown
+        setSelectedOption={setSelectedOption}
+        selectedOption={selectedOption}
+        options={options}
+      />
       <BlockTitle>Stocks</BlockTitle>
       <StocksList />
       <BlockTitle>Quotes</BlockTitle>
@@ -53,5 +58,3 @@ const CurrencySection = () => {
     </CurrencyWrapper>
   )
 }
-
-export default CurrencySection

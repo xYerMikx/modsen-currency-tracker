@@ -2,9 +2,9 @@ import styled from "styled-components"
 
 export const CurrencyWrapper = styled.section`
   color: ${(props) => props.theme.primaryColor};
-  padding: 0 10rem;
-  margin-top: 6rem;
-  margin-bottom: 12rem;
+  padding: 0 ${(props) => props.theme.paddings.xxl};
+  margin-top: ${(props) => props.theme.margins.lg};
+  margin-bottom: ${(props) => props.theme.margins.xxl};
 `
 
 export const LastUpdatedText = styled.p`
@@ -21,14 +21,14 @@ export const LastUpdatedWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 6rem;
+  margin-bottom: ${(props) => props.theme.margins.lg};
 `
 
 export const BlockTitle = styled.h2`
   font-size: ${(props) => props.theme.fontSize.md};
-  padding-bottom: 2.4rem;
-  margin-bottom: 5rem;
-  margin-top: 10rem;
+  padding-bottom: ${(props) => props.theme.paddings.md};
+  margin-bottom: ${(props) => props.theme.margins.xxmd};
+  margin-top: ${(props) => props.theme.margins.xl};
   border-bottom: 0.1rem solid ${(props) => props.theme.darkColor};
   font-weight: ${(props) => props.theme.fontWeight.light};
   max-width: 40rem;
