@@ -61,6 +61,6 @@
     "webpack-merge": "^5.10.0"
   },
   "msw": {
-    "workerDirectory": "public"
+    "workerDirectory": "src"
   }
 }
