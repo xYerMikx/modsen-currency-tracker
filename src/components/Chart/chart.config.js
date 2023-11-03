@@ -109,12 +109,13 @@ export const chartConfig = {
       tooltip: {
         callbacks: {
           beforeBody: (ctx) => {
+            console.log(ctx)
             const { raw } = ctx[0]
             const body = [
-              `Open: ${raw.o.toFixed(2)}`,
-              `High: ${raw.h.toFixed(2)}`,
-              `Low: ${raw.l.toFixed(2)}`,
-              `Close: ${raw.c.toFixed(2)}`,
+              `Open: ${Number(raw.o).toFixed(2)}`,
+              `High: ${Number(raw.h).toFixed(2)}`,
+              `Low: ${Number(raw.l).toFixed(2)}`,
+              `Close: ${Number(raw.c).toFixed(2)}`,
             ]
             return body
           },

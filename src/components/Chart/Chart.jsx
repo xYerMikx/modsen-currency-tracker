@@ -47,16 +47,10 @@ export class ChartComponent extends Component {
     }
     getData()
   }
-  componentDidUpdate(prevProps) {
-    const { selectedOption } = this.props
-    if (prevProps.selectedOption !== selectedOption) {
-    }
-  }
 
-  getDataForChartConfig() {
+  getDataForChartConfig(formData) {
     const configData = chartConfig.data
     const { data } = this.state
-    const { formData } = this.props
 
     return {
       datasets: [
@@ -70,10 +64,11 @@ export class ChartComponent extends Component {
   }
 
   render() {
+    const { formData } = this.props
     return (
       <div>
         <Chart
-          data={this.getDataForChartConfig()}
+          data={this.getDataForChartConfig(formData)}
           options={chartConfig.options}
           type={chartConfig.type}
           plugins={chartConfig.plugins}

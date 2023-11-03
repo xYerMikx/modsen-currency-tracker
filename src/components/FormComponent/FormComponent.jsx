@@ -40,8 +40,9 @@ export class FormComponent extends Component {
   }
 
   handleFormSubmit = () => {
-    const { onSubmit } = this.props
+    const { onSubmit, observable } = this.props
     onSubmit(this.state.data)
+    observable.setData(this.state.data)
   }
 
   handleRandomize = () => {
@@ -57,7 +58,7 @@ export class FormComponent extends Component {
   }
 
   getRandomValue = () => {
-    return Math.random() * 1.5 + 0.5
+    return (Math.random() * 1.5 + 0.5).toFixed(3)
   }
 
   render() {
