@@ -12,7 +12,7 @@ import { currencies, currenciesCodes } from "@/constants/currencies"
 import { ChartComponent } from "@/components/Chart/Chart"
 import { FormComponent } from "@/components/FormComponent/FormComponent"
 import { Notification } from "@/components/Notification/Notification"
-import { Observer } from "@/utils/observer"
+import { Observer } from "@/services/observer"
 
 export const Timeline = () => {
   const observable = new Observer()

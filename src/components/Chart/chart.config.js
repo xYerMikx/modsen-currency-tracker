@@ -97,6 +97,7 @@ export const chartConfig = {
         },
         position: "right",
         beginAtZero: false,
+        grace: 1.25,
         grid: {
           color: "#3e3e3e",
         },
@@ -109,7 +110,6 @@ export const chartConfig = {
       tooltip: {
         callbacks: {
           beforeBody: (ctx) => {
-            console.log(ctx)
             const { raw } = ctx[0]
             const body = [
               `Open: ${Number(raw.o).toFixed(2)}`,

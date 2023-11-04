@@ -28,14 +28,18 @@ export class ChartComponent extends Component {
     const getData = async () => {
       try {
         const { data } = await axios.get("/chart")
-        const array = data.map((item) => ({
-          x: new Date(item.time_period_start.slice(0, 10)).setHours(0, 0, 0, 0),
-          o: item.rate_open,
-          h: item.rate_high,
-          l: item.rate_low,
-          c: item.rate_close,
-          s: [item.rate_open, item.rate_close],
-        }))
+        const array = data.map((item) => {
+          const o = item.rate_open.toFixed(2)
+          const c = item.rate_close.toFixed(2)
+          return {
+            x: new Date(item.time_period_start.slice(0, 10)).setHours(0, 0, 0, 0),
+            o,
+            h: item.rate_high.toFixed(2),
+            l: item.rate_low.toFixed(2),
+            c,
+            s: [o, c],
+          }
+        })
 
         if (array.length === 0) {
           throw new Error("No data")

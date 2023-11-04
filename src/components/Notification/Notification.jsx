@@ -1,4 +1,5 @@
 import { Component } from "react"
+import { NotificationContainer } from "./styled"
 
 export class Notification extends Component {
   constructor(props) {
@@ -33,17 +34,9 @@ export class Notification extends Component {
   render() {
     if (!this.state.show) return null
     return (
-      <div
-        style={{
-          position: "fixed",
-          top: 0,
-          right: 0,
-          backgroundColor: "lightgreen",
-          padding: "10px",
-        }}
-      >
+      <NotificationContainer>
         График за 30 дней был успешно построен
-      </div>
+      </NotificationContainer>
     )
   }
 }
