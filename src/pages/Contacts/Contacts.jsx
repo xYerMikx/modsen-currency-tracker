@@ -13,7 +13,7 @@ export const Contacts = () => {
   return (
     <ContactsWrapper>
       <Flex>
-        <ProfileImage src={profile} />
+        <ProfileImage src={profile} alt="Profile" />
         <LinksWrapper>
           {contactsLinks.map(({ link, name }) => {
             return (
