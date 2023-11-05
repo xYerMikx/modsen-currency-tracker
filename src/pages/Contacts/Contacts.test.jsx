@@ -17,14 +17,16 @@ describe("Contacts", () => {
     expect(emailText).toBeInTheDocument()
   })
 
-  it("renders contacts links", () => {
-    renderWithWrappers(<Contacts />)
-    contactsLinks.forEach(({ link, name }) => {
+  it.each(contactsLinks.map(({ name, link }) => [name, link]))(
+    "renders contact link with name: %s and link: %s",
+    (name, link) => {
+      renderWithWrappers(<Contacts />)
       const contactLink = screen.getByText(name)
       expect(contactLink).toBeInTheDocument()
       expect(contactLink).toHaveAttribute("href", link)
-    })
-  })
+    },
+  )
+
   it("renders the profile image", () => {
     renderWithWrappers(<Contacts />)
     const profileImage = screen.getByAltText("Profile")
