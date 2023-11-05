@@ -28,18 +28,17 @@ export class ChartComponent extends Component {
     const getData = async () => {
       try {
         const { data } = await axios.get("/chart")
-        const array = data.map((item) => ({
-          x: new Date(item.time_period_start.slice(0, 10)).setHours(0, 0, 0, 0),
-          o: item.rate_open,
-          h: item.rate_high,
-          l: item.rate_low,
-          c: item.rate_close,
-          s: [item.rate_open, item.rate_close],
-        }))
+        const array = data.map(
+          ({ time_period_start, rate_open, rate_high, rate_low, rate_close }) => ({
+            x: new Date(time_period_start.slice(0, 10)).setHours(0, 0, 0, 0),
+            o: rate_open,
+            h: rate_high,
+            l: rate_low,
+            c: rate_close,
+            s: [rate_open, rate_close],
+          }),
+        )
 
-        if (array.length === 0) {
-          throw new Error("No data")
-        }
         this.setState((prevState) => ({ ...prevState, data: array }))
       } catch (e) {
         console.error(e)
