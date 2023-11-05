@@ -20,7 +20,7 @@ export const DayContainer = styled.div`
   flex-direction: column;
   gap: 2rem;
   padding: ${(props) => props.theme.spacings.xxs};
-  border: 0.1rem solid #ccc;
+  border: 0.1rem solid ${(props) => props.theme.primaryColor};
   border-radius: ${(props) => props.theme.borderRadius};
 `
 
@@ -41,7 +41,7 @@ export const FormButton = styled.button`
 export const PageButton = styled.button`
   padding: ${(props) => props.theme.spacings.xs};
   background-color: ${(props) => props.theme.darkColor};
-  color: white;
+  color: ${(props) => props.theme.primaryColor};
   border: none;
   border-radius: ${(props) => props.theme.borderRadius};
   cursor: pointer;

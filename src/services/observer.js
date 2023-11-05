@@ -30,3 +30,5 @@ export class Observer {
     this.observers.forEach((observer) => observer(data))
   }
 }
+
+export const observable = new Observer()

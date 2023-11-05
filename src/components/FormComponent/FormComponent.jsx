@@ -49,33 +49,11 @@ export class FormComponent extends Component {
     this.setState({ data: newData })
   }
 
-  handleFormSubmit = () => {
-    const { onSubmit, observable } = this.props
-    onSubmit(this.state.data)
-    observable.setData(this.state.data)
-  }
-
   handlePageChange = (pageNumber) => () => {
     this.setState((prevState) => ({
       ...prevState,
       currentPage: pageNumber,
     }))
-  }
-
-  handleRandomize = () => {
-    const newData = this.state.data.map(({ x }) => {
-      const o = this.getRandomValue()
-      const c = this.getRandomValue(Number(o))
-      return {
-        x,
-        o,
-        h: this.getRandomValue(),
-        l: this.getRandomValue(),
-        c,
-        s: [o, c],
-      }
-    })
-    this.setState({ data: newData })
   }
 
   getRandomValue = (num) => {
@@ -88,6 +66,27 @@ export class FormComponent extends Component {
   }
 
   render() {
+    const handleRandomize = () => {
+      const newData = this.state.data.map(({ x }) => {
+        const o = this.getRandomValue()
+        const c = this.getRandomValue(Number(o))
+        return {
+          x,
+          o,
+          h: this.getRandomValue(),
+          l: this.getRandomValue(),
+          c,
+          s: [o, c],
+        }
+      })
+      this.setState({ data: newData })
+    }
+    const handleFormSubmit = () => {
+      const { onSubmit, observable } = this.props
+      onSubmit(this.state.data)
+      observable.setData(this.state.data)
+    }
+
     const itemsPerPage = Math.ceil(this.state.data.length / 3)
     const startIndex = this.state.currentPage * itemsPerPage
     const endIndex = startIndex + itemsPerPage
@@ -115,8 +114,8 @@ export class FormComponent extends Component {
             )
           })}
         </ButtonContainer>
-        <FormButton onClick={this.handleFormSubmit}>Update Chart</FormButton>
-        <FormButton onClick={this.handleRandomize}>Randomize values</FormButton>
+        <FormButton onClick={handleFormSubmit}>Update Chart</FormButton>
+        <FormButton onClick={handleRandomize}>Randomize values</FormButton>
       </FormContainer>
     )
   }

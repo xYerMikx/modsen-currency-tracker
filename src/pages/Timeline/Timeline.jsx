@@ -12,10 +12,9 @@ import { currencies, currenciesCodes } from "@/constants/currencies"
 import { ChartComponent } from "@/components/Chart/Chart"
 import { FormComponent } from "@/components/FormComponent/FormComponent"
 import { Notification } from "@/components/Notification/Notification"
-import { Observer } from "@/services/observer"
+import { observable } from "@/services/observer"
 
 export const Timeline = () => {
-  const observable = new Observer()
   const [selectedOption, setSelectedOption] = useState("USD")
   const selectedCurrency = currencies.find(({ code }) => code === selectedOption)
   const [formData, setFormData] = useState([])
