@@ -7,7 +7,6 @@ import { observable } from "@/services/observer"
 
 export const Timeline = () => {
   const [formData, setFormData] = useState([])
-
   return (
     <TimelineContainer>
       <FormComponent onSubmit={setFormData} observable={observable} />
