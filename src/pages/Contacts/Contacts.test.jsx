@@ -1,4 +1,3 @@
-import React from "react"
 import { Contacts } from "./Contacts"
 import { renderWithWrappers } from "@/utils/testUtils"
 import { contactsLinks } from "@/constants/contactsLinks"
@@ -17,9 +16,9 @@ describe("Contacts", () => {
     expect(emailText).toBeInTheDocument()
   })
 
-  it.each(contactsLinks.map(({ name, link }) => [name, link]))(
-    "renders contact link with name: %s and link: %s",
-    (name, link) => {
+  it.each(contactsLinks)(
+    "renders contact link with name: $name and link: $link",
+    ({ name, link }) => {
       renderWithWrappers(<Contacts />)
       const contactLink = screen.getByText(name)
       expect(contactLink).toBeInTheDocument()
