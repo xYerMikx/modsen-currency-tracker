@@ -1,6 +1,6 @@
 import { Component, createRef } from "react"
 import { MapContainer } from "./styled"
-import mapboxgl from "!mapbox-gl"
+import mapboxgl from "mapbox-gl"
 import axios from "axios"
 import { currenciesCodes } from "@/constants/currencies"
 import { mapConfig } from "@/constants/mapConfig"
@@ -52,23 +52,14 @@ export class Map extends Component {
       }
     }
 
-    const getUserLocation = () => {
-      const position = {
-        coords: {
-          latitude: 53.893009,
-          longitude: 27.567444,
-        },
-      }
-      navigator.permissions.query({ name: "geolocation" }).then((result) => {
-        if (result.state === "granted") {
-          navigator.geolocation.getCurrentPosition(getBanksMap)
-        } else {
-          getBanksMap(position)
-        }
-      })
+    const position = {
+      coords: {
+        latitude: 53.893009,
+        longitude: 27.567444,
+      },
     }
 
-    getUserLocation()
+    getBanksMap(position)
   }
 
   shouldComponentUpdate(nextProps) {
