@@ -23,8 +23,8 @@ export const Dropdown = ({ selectedOption, setSelectedOption, options }) => {
   return (
     <Main>
       <DropDownContainer>
-        <DropDownHeader onClick={toggling}>
-          <p>{selectedOption || "USD"}</p>
+        <DropDownHeader data-testid="dropdown-header" onClick={toggling}>
+          <p data-testid="dropdown-text">{selectedOption || "USD"}</p>
           <ArrowIcon src={arrow} />
         </DropDownHeader>
         {isOpen && (
