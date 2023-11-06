@@ -1,4 +1,4 @@
-import { render, fireEvent, waitFor, act } from "@testing-library/react"
+import { fireEvent, waitFor } from "@testing-library/react"
 import axios from "axios"
 import { Modal } from "./Modal"
 import { currenciesCodes } from "@/constants/currencies"
@@ -34,7 +34,7 @@ describe("Modal", () => {
     jest.clearAllMocks()
   })
 
-  it("fetches and displays data correctly", async () => {
+  it("should fetch and displays data correctly", async () => {
     const { getByTestId } = renderWithWrappers(<Modal {...mockProps} />)
 
     expect(axios.get).toHaveBeenCalledWith("/currencies")
@@ -49,7 +49,7 @@ describe("Modal", () => {
     )
   })
 
-  it("handles currency change", async () => {
+  it("should handle currency change", async () => {
     const { getByTestId } = renderWithWrappers(<Modal {...mockProps} />)
 
     fireEvent.change(getByTestId("conversion-select"), { target: { value: "EUR" } })
@@ -57,7 +57,7 @@ describe("Modal", () => {
     await waitFor(() => expect(select).toBe("EUR"))
   })
 
-  it("handles value change", async () => {
+  it("should handle value change", async () => {
     const { getByTestId } = renderWithWrappers(<Modal {...mockProps} />)
 
     fireEvent.change(getByTestId("conversion-input"), { target: { value: "2" } })
@@ -65,7 +65,7 @@ describe("Modal", () => {
     await waitFor(() => expect(getByTestId("conversion-input").value).toBe("2"))
   })
 
-  it("handles close button click", async () => {
+  it("should handle close button click", async () => {
     const { getByTestId } = renderWithWrappers(<Modal {...mockProps} />)
 
     fireEvent.click(getByTestId("close-button"))
