@@ -46,7 +46,7 @@ export const Modal = ({ onClose, name, imageSrc, code }) => {
 
   return (
     <ModalOverlay>
-      <ModalBox>
+      <ModalBox data-testid="modal">
         <InfoWrapper>
           <ModalImage src={imageSrc} />
           <p>{name}</p>
@@ -72,7 +72,9 @@ export const Modal = ({ onClose, name, imageSrc, code }) => {
             </ConversionSelect>
           </div>
         </ConversionWrapper>
-        <CloseButton onClick={onClose}>Close</CloseButton>
+        <CloseButton data-testid="close-button" onClick={onClose}>
+          Close
+        </CloseButton>
       </ModalBox>
     </ModalOverlay>
   )
