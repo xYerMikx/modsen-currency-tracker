@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install",
-    "test": "jest Notification.test.jsx"
+    "test": "jest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
