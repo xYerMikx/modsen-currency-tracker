@@ -29,7 +29,11 @@ export const FooterInfo = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex: 0 1 40%;
+  flex: 0 1 50%;
+
+  @media ${media.desktop} {
+    flex: 0 1 75%;
+  }
 
   @media ${media.phone} {
     flex-direction: column;
@@ -41,9 +45,10 @@ export const FooterLinks = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 0 1 60%;
+  flex: 0 1 50%;
 
-  @media ${media.tablet} {
+  @media ${media.desktop} {
+    flex: 0 1 25%;
     flex-direction: column;
   }
 `
@@ -55,15 +60,18 @@ export const InfoText = styled.p`
   }
 `
 
-export const FooterText = styled.p`
-  margin-left: ${(props) => props.theme.spacings.md};
+export const FooterText = styled.div`
+  @media ${media.desktop} {
+    margin-left: ${(props) => props.theme.spacings.md};
+    text-align: center;
+  }
   @media ${media.phone} {
     text-align: center;
   }
 `
 
 export const LinkBlock = styled.li`
-  @media ${media.tablet} {
+  @media ${media.desktop} {
     & > h4:hover {
       color: ${(props) => props.theme.darkColor};
     }
@@ -77,7 +85,7 @@ export const LinkBlock = styled.li`
 export const LinkBlockTitle = styled.h4`
   font-size: ${(props) => props.theme.fontSize.md};
   margin-bottom: ${(props) => props.theme.spacings.xmd};
-  @media ${media.tablet} {
+  @media ${media.desktop} {
     cursor: pointer;
   }
 `
@@ -101,7 +109,7 @@ export const LinksContainer = styled.div`
   flex-direction: column;
   gap: 2rem;
 
-  @media ${media.tablet} {
+  @media ${media.desktop} {
     display: ${(props) => (props.isOpen ? "flex" : "none")};
   }
 `

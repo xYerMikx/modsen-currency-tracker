@@ -19,6 +19,9 @@ export const LastUpdatedText = styled.p`
   @media ${media.tablet} {
     font-size: ${(props) => props.theme.fontSize.sm};
   }
+  @media ${media.phone} {
+    font-size: 1.6rem;
+  }
 `
 
 export const LastUpdatedStatus = styled.img`
@@ -53,7 +56,7 @@ export const BlockTitle = styled.h2`
 
   @media ${media.tablet} {
     font-size: ${(props) => props.theme.fontSize.sm};
-    margin-top: ${(props) => props.theme.spacings.md};
+    margin-top: ${(props) => props.theme.spacings.xxmd};
     max-width: 100%;
   }
 `
