@@ -5,7 +5,6 @@ import { BrowserRouter as Router } from "react-router-dom"
 import { footerLinks } from "@/constants/footerLinks"
 
 describe("Footer tests", () => {
-  const linkBlocks = footerLinks.map(({ title, links }) => [title, links])
   beforeEach(() => {
     renderWithWrappers(
       <Router>
@@ -24,9 +23,9 @@ describe("Footer tests", () => {
     expect(screen.getByAltText("Logo")).toBeInTheDocument()
   })
 
-  it.each(linkBlocks)(
-    "should render the footer link block with title %s and links",
-    (title, links) => {
+  it.each(footerLinks)(
+    "should render the footer link block with title $title",
+    ({ title, links }) => {
       expect(screen.getByText(title)).toBeInTheDocument()
 
       links.forEach((link) => {
