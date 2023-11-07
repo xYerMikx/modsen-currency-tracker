@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import { media } from "@/constants/sizes"
+
 export const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
@@ -17,6 +19,11 @@ export const ModalBox = styled.div`
   padding: ${(props) => props.theme.spacings.sm};
   min-width: 50rem;
   min-height: 20rem;
+
+  @media ${media.tablet} {
+    min-width: 90%;
+    min-height: auto;
+  }
 `
 
 export const CloseButton = styled.div`
@@ -36,8 +43,17 @@ export const CloseButton = styled.div`
     color: ${(props) => props.theme.orange};
     background-color: ${(props) => props.theme.primaryColor};
   }
+
+  @media ${media.tablet} {
+    max-width: 10rem;
+  }
 `
-export const ModalImage = styled.img``
+export const ModalImage = styled.img`
+  @media ${media.tablet} {
+    width: 5rem;
+    height: auto;
+  }
+`
 
 export const InfoWrapper = styled.div`
   display: flex;

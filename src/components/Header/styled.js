@@ -37,6 +37,7 @@ export const LinksList = styled.ul`
     font-size: ${(props) => props.theme.fontSize.md};
     transform: ${(props) => (props.isOpen ? "translateX(0)" : "translateX(-100%)")};
     transition: transform 0.3s ease-in-out;
+    z-index: ${(props) => props.theme.zIndex.xl};
   }
 `
 
@@ -65,6 +66,7 @@ export const Switch = styled.div`
   border-radius: 3.2rem;
   border: 0.1rem solid ${(props) => props.theme.primaryColor};
   transition: 300ms all;
+  z-index: ${(props) => props.theme.zIndex.xxl};
 
   &:before {
     content: "";
@@ -108,7 +110,7 @@ export const BurgerMenuButton = styled.div`
   height: 2rem;
   background: transparent;
   border: none;
-  z-index: ${(props) => props.theme.zIndex.two};
+  z-index: ${(props) => props.theme.zIndex.xxl};
   cursor: pointer;
 
   @media ${media.tablet} {

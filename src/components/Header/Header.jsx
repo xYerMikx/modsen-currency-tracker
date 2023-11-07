@@ -18,13 +18,24 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
+    const shouldChangeBody = window.innerWidth <= 768
+
+    if (shouldChangeBody) {
+      setIsOpen(!isOpen)
+
+      if (!isOpen) {
+        document.body.style.overflow = "hidden"
+      } else {
+        document.body.style.overflow = "auto"
+      }
+    }
   }
   const dispatch = useDispatch()
 
   const changeTheme = () => {
     dispatch(setTheme())
   }
+
   return (
     <HeaderWrapper>
       <Link to="/">

@@ -18,6 +18,7 @@ export const CardWrapper = styled.div`
   }
 
   @media ${media.phone} {
+    padding: ${(props) => props.theme.spacings.sm};
     flex: 1 0 100%;
     width: 100%;
   }
@@ -25,6 +26,9 @@ export const CardWrapper = styled.div`
 
 export const CardTitle = styled.h3`
   color: ${(props) => props.theme.secondaryColor};
+  @media ${media.phone} {
+    font-size: 1.6rem;
+  }
 `
 
 export const CardText = styled.p`
@@ -32,7 +36,7 @@ export const CardText = styled.p`
   font-size: ${(props) => props.theme.fontSize.md};
 
   @media ${media.tablet} {
-    font-size: ${(props) => props.theme.fontSize.sm};
+    font-size: 1.6rem;
   }
 `
 
