@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import { media } from "@/constants/sizes"
+
 export const SearchContainer = styled.div`
   position: relative;
   width: 36rem;
@@ -8,7 +10,12 @@ export const SearchContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-left: ${(props) => props.theme.spacings.xxxs};
+  padding-right: ${(props) => props.theme.spacings.xxxs};
   transition: all 0.3s linear;
+
+  @media ${media.tablet} {
+    width: 24rem;
+  }
 `
 
 export const Label = styled.label`
@@ -59,6 +66,11 @@ export const IconButton = styled.button`
     background: ${(props) => props.theme.black};
     transform: scale(0.6);
     opacity: 0;
+  }
+
+  @media ${media.tablet} {
+    height: 3rem;
+    width: 3rem;
   }
 `
 

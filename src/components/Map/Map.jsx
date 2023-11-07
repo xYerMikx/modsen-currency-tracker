@@ -20,11 +20,12 @@ export class Map extends Component {
   componentDidMount() {
     const getBanksMap = (pos) => {
       if (this.mapContainer.current) {
+        const zoom = window.innerWidth <= 768 ? 9 : mapConfig.zoom
         this.map = new mapboxgl.Map({
           container: this.mapContainer.current,
           style: mapConfig.styles,
           center: [pos.coords.longitude, pos.coords.latitude],
-          zoom: mapConfig.zoom,
+          zoom: zoom,
           accessToken: mapConfig.accessToken,
         })
 
