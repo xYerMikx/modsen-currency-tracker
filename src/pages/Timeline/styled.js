@@ -1,5 +1,6 @@
 import styled from "styled-components"
 
+import { media } from "@/constants/sizes"
 import { mainContainerStyles } from "@/styles/commonStyles"
 
 export const TimelineContainer = styled.main`
@@ -8,6 +9,14 @@ export const TimelineContainer = styled.main`
   padding: ${(props) => props.theme.spacings.xl};
 
   color: ${(props) => props.theme.primaryColor};
+
+  @media ${media.tablet} {
+    padding: ${(props) => props.theme.spacings.md};
+  }
+
+  @media ${media.phone} {
+    padding: ${(props) => props.theme.spacings.xxs};
+  }
 `
 
 export const SelectedCurrencyWrapper = styled.div`

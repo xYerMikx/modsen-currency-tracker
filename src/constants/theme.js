@@ -22,6 +22,7 @@ const commonTheme = {
     two: 2,
     xl: 10,
     xxl: 20,
+    xxxl: 30,
   },
   fontSize: {
     sm: "2rem",
