@@ -25,7 +25,7 @@ export const Header = () => {
           )
         })}
       </LinksList>
-      <Label>
+      <Label data-cy="theme-switch">
         <Input type="checkbox" onChange={changeTheme} />
         <Switch />
       </Label>

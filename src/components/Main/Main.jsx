@@ -17,3 +17,7 @@ export const Main = () => {
     </Provider>
   )
 }
+
+if (window.Cypress) {
+  window.store = store
+}
