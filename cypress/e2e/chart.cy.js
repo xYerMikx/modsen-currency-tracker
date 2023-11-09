@@ -1,6 +1,6 @@
 describe("Timeline page", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000/timeline") // замените на URL вашей страницы Timeline
+    cy.visit("http://localhost:3000/timeline")
   })
 
   it("should display notification when visited /timeline", () => {
