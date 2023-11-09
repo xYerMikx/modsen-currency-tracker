@@ -22,6 +22,9 @@ export const Modal = ({ onClose, name, imageSrc, code }) => {
     setSelectedBase(e.target.value)
   }
   const changeValueAmount = (e) => {
+    if (e.target.value < 0) {
+      return
+    }
     setBaseValueAmount(e.target.value)
   }
   useEffect(() => {
@@ -46,7 +49,7 @@ export const Modal = ({ onClose, name, imageSrc, code }) => {
 
   return (
     <ModalOverlay>
-      <ModalBox>
+      <ModalBox data-cy="modal">
         <InfoWrapper>
           <ModalImage src={imageSrc} />
           <p>{name}</p>
@@ -54,13 +57,12 @@ export const Modal = ({ onClose, name, imageSrc, code }) => {
         <ConversionWrapper>
           <ConversionInput
             type="number"
-            value={Math.abs(baseValueAmount)}
+            value={baseValueAmount}
             onChange={changeValueAmount}
-            min={0}
           />
           <p>=</p>
           <div>
-            <span>{convertedValue}</span>
+            <span data-cy="converted-value">{convertedValue}</span>
             <ConversionSelect value={selectedBase || "USD"} onChange={onSelectChange}>
               {currentOptions.map((el) => {
                 return (
@@ -72,7 +74,9 @@ export const Modal = ({ onClose, name, imageSrc, code }) => {
             </ConversionSelect>
           </div>
         </ConversionWrapper>
-        <CloseButton onClick={onClose}>Close</CloseButton>
+        <CloseButton data-cy="close-button" onClick={onClose}>
+          Close
+        </CloseButton>
       </ModalBox>
     </ModalOverlay>
   )

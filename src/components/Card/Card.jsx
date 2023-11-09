@@ -10,7 +10,7 @@ export const Card = ({ name, baseCurrency, amount, imageSrc, isQuote, code }) =>
 
   return (
     <>
-      <CardWrapper onClick={showModal}>
+      <CardWrapper data-cy="currency-card" onClick={showModal}>
         <Image src={imageSrc} alt="dollar" />
         <div>
           <CardTitle>{name}</CardTitle>
