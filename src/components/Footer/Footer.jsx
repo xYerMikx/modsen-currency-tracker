@@ -1,9 +1,11 @@
+import { useState } from "react"
 import {
   Container,
   Copyright,
   FooterInfo,
   FooterLink,
   FooterLinks,
+  FooterText,
   FooterWrapper,
   InfoText,
   LinkBlock,
@@ -16,6 +18,15 @@ import { GradientText } from "@/components/GradientText/GradientText"
 import { Link } from "react-router-dom"
 
 export const Footer = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleLinks = (index) => () => {
+    if (index === isOpen) {
+      setIsOpen(null)
+    } else {
+      setIsOpen(index)
+    }
+  }
   return (
     <FooterWrapper>
       <Container>
@@ -23,7 +34,9 @@ export const Footer = () => {
           <Link to="/">
             <Logo />
           </Link>
-          <GradientText>Modsen Currency Tracker</GradientText>
+          <FooterText>
+            <GradientText>Modsen Currency Tracker</GradientText>
+          </FooterText>
           <InfoText>
             Since then, the company has grown organically to. Starsup is the world's
             largest trading platform, with $12 billion worth of currency trading and
@@ -31,10 +44,10 @@ export const Footer = () => {
           </InfoText>
         </FooterInfo>
         <FooterLinks>
-          {footerLinks.map(({ title, links }) => (
+          {footerLinks.map(({ title, links }, index) => (
             <LinkBlock key={title}>
-              <LinkBlockTitle>{title}</LinkBlockTitle>
-              <LinksContainer>
+              <LinkBlockTitle onClick={toggleLinks(index)}>{title}</LinkBlockTitle>
+              <LinksContainer isOpen={isOpen === index}>
                 {links.map((link, index) => (
                   <FooterLink key={index}>{link}</FooterLink>
                 ))}

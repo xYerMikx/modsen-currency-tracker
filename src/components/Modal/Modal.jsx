@@ -49,13 +49,14 @@ export const Modal = ({ onClose, name, imageSrc, code }) => {
 
   return (
     <ModalOverlay>
-      <ModalBox data-cy="modal">
+      <ModalBox data-testid="modal" data-cy="modal">
         <InfoWrapper>
           <ModalImage src={imageSrc} />
           <p>{name}</p>
         </InfoWrapper>
         <ConversionWrapper>
           <ConversionInput
+            data-testid="conversion-input"
             type="number"
             value={baseValueAmount}
             onChange={changeValueAmount}
@@ -63,7 +64,11 @@ export const Modal = ({ onClose, name, imageSrc, code }) => {
           <p>=</p>
           <div>
             <span data-cy="converted-value">{convertedValue}</span>
-            <ConversionSelect value={selectedBase || "USD"} onChange={onSelectChange}>
+            <ConversionSelect
+              data-testid="conversion-select"
+              value={selectedBase || "USD"}
+              onChange={onSelectChange}
+            >
               {currentOptions.map((el) => {
                 return (
                   <option value={el} key={el}>
@@ -74,7 +79,7 @@ export const Modal = ({ onClose, name, imageSrc, code }) => {
             </ConversionSelect>
           </div>
         </ConversionWrapper>
-        <CloseButton data-cy="close-button" onClick={onClose}>
+        <CloseButton data-cy="close-button" data-testid="close-button" onClick={onClose}>
           Close
         </CloseButton>
       </ModalBox>

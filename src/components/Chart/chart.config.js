@@ -63,6 +63,8 @@ export const chartConfig = {
   type: "bar",
   data: customData,
   options: {
+    // maintainAspectRatio: false,
+    aspectRatio: window.innerWidth <= 768 ? 1.25 : 2,
     parsing: {
       xAxisKey: "x",
       yAxisKey: "s",

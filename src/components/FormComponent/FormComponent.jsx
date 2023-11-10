@@ -86,8 +86,8 @@ export class FormComponent extends Component {
       onSubmit(this.state.data)
       observable.setData(this.state.data)
     }
-
-    const itemsPerPage = Math.ceil(this.state.data.length / 3)
+    const pagesAmount = window.innerWidth <= 768 ? 6 : 3
+    const itemsPerPage = Math.ceil(this.state.data.length / pagesAmount)
     const startIndex = this.state.currentPage * itemsPerPage
     const endIndex = startIndex + itemsPerPage
     return (
@@ -106,7 +106,7 @@ export class FormComponent extends Component {
           ))}
         </InputsContainer>
         <ButtonContainer>
-          {Array.from({ length: 3 }, (_, k) => k + 1).map((el) => {
+          {Array.from({ length: pagesAmount }, (_, k) => k + 1).map((el) => {
             return (
               <PageButton
                 data-testid="page-button"
