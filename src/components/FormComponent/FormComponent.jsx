@@ -108,7 +108,11 @@ export class FormComponent extends Component {
         <ButtonContainer>
           {Array.from({ length: pagesAmount }, (_, k) => k + 1).map((el) => {
             return (
-              <PageButton key={el} onClick={this.handlePageChange(el - 1)}>
+              <PageButton
+                data-testid="page-button"
+                key={el}
+                onClick={this.handlePageChange(el - 1)}
+              >
                 {el}
               </PageButton>
             )

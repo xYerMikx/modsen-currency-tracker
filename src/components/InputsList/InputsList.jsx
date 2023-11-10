@@ -11,6 +11,7 @@ export class InputsList extends Component {
     return formInputs.map(({ type, placeholder }) => {
       return (
         <FormInput
+          data-testid="form-input"
           key={`${placeholder}-${indexWithPage}`}
           placeholder={placeholder}
           type={type}
