@@ -29,16 +29,19 @@ export class ChartComponent extends Component {
       try {
         const { data } = await axios.get("/chart")
         const array = data.map(
-          ({ time_period_start, rate_open, rate_high, rate_low, rate_close }) => ({
-            x: new Date(time_period_start.slice(0, 10)).setHours(0, 0, 0, 0),
-            o: rate_open,
-            h: rate_high,
-            l: rate_low,
-            c: rate_close,
-            s: [rate_open, rate_close],
-          }),
+          ({ rate_open, rate_close, time_period_start, rate_high, rate_low }) => {
+            const o = rate_open.toFixed(2)
+            const c = rate_close.toFixed(2)
+            return {
+              x: new Date(time_period_start.slice(0, 10)).setHours(0, 0, 0, 0),
+              o,
+              h: rate_high.toFixed(2),
+              l: rate_low.toFixed(2),
+              c,
+              s: [o, c],
+            }
+          },
         )
-
         this.setState((prevState) => ({ ...prevState, data: array }))
       } catch (e) {
         console.error(e)
