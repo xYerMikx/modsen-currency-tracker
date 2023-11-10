@@ -4,6 +4,7 @@ import { Chart } from "react-chartjs-2"
 import { chartConfig } from "./chart.config"
 import "chartjs-adapter-date-fns"
 import axios from "axios"
+import { ChartWrapper } from "./styled"
 
 ChartJS.register(...registerables)
 
@@ -68,14 +69,14 @@ export class ChartComponent extends Component {
   render() {
     const { formData } = this.props
     return (
-      <div>
+      <ChartWrapper>
         <Chart
           data={this.getDataForChartConfig(formData)}
           options={chartConfig.options}
           type={chartConfig.type}
           plugins={chartConfig.plugins}
         />
-      </div>
+      </ChartWrapper>
     )
   }
 }

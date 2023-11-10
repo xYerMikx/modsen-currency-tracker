@@ -14,4 +14,5 @@ export const NotificationContainer = styled.div`
   padding: ${(props) => props.theme.spacings.sm};
   animation: 2s ${fadeInOut} ease-in-out;
   animation-fill-mode: forwards;
+  z-index: ${(props) => props.theme.zIndex.xxxl};
 `

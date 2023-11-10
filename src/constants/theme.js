@@ -20,6 +20,9 @@ const commonTheme = {
     lowest: -1,
     one: 1,
     two: 2,
+    xl: 10,
+    xxl: 20,
+    xxxl: 30,
   },
   fontSize: {
     sm: "2rem",

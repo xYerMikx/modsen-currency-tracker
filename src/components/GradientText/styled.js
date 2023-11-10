@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import { media } from "@/constants/sizes"
+
 export const GradientWrapper = styled.div`
   background: ${(props) => props.theme.gradientColor};
   background-clip: text;
@@ -9,4 +11,8 @@ export const GradientWrapper = styled.div`
   -moz-text-fill-color: transparent;
   margin-left: ${(props) => props.theme.spacings.sm};
   font-weight: ${(props) => props.theme.fontWeight.semiBold};
+
+  @media ${media.tablet} {
+    margin-left: 0;
+  }
 `
