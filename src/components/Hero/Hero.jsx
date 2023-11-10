@@ -21,7 +21,7 @@ export const Hero = () => {
         </GradientText>
         <HeroText>Quotes for the dollar and other international currencies.</HeroText>
       </HeroInfo>
-      <HeroImage src={heroImage} />
+      <HeroImage src={heroImage} alt="Hero image" />
     </HeroWrapper>
   )
 }

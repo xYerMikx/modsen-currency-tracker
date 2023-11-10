@@ -26,7 +26,7 @@ export const Header = () => {
         })}
       </LinksList>
       <Label>
-        <Input type="checkbox" onChange={changeTheme} />
+        <Input data-testid="switch-theme" type="checkbox" onChange={changeTheme} />
         <Switch />
       </Label>
     </HeaderWrapper>
