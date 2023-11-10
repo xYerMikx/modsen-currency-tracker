@@ -34,7 +34,7 @@ export class Notification extends Component {
   render() {
     if (!this.state.show) return null
     return (
-      <NotificationContainer>
+      <NotificationContainer data-cy="notification">
         График за 30 дней был успешно построен
       </NotificationContainer>
     )

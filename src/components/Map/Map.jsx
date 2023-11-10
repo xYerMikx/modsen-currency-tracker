@@ -99,6 +99,6 @@ export class Map extends Component {
     }
   }
   render() {
-    return <MapContainer ref={this.mapContainer} />
+    return <MapContainer data-cy="map-container" ref={this.mapContainer} />
   }
 }
