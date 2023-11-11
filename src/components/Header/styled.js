@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import styled from "styled-components"
 
-import { media } from "../../constants/sizes"
+import { media } from "@/constants/sizes"
 
 export const HeaderWrapper = styled.header`
   padding: ${(props) => props.theme.spacings.md} ${(props) => props.theme.spacings.xl};
@@ -19,11 +19,14 @@ export const LinksList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 70%;
+  min-width: 50%;
   color: ${(props) => props.theme.primaryColor};
   font-size: ${(props) => props.theme.fontSize.sm};
   font-weight: ${(props) => props.theme.fontWeight.light};
 
+  @media ${media.desktop} {
+    min-width: 70%;
+  }
   @media ${media.tablet} {
     position: absolute;
     top: 0;

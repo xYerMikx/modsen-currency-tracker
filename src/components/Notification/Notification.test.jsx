@@ -1,6 +1,6 @@
 import { act } from "@testing-library/react"
 import { Notification } from "./Notification"
-import { renderWithWrappers } from "../../utils/testUtils"
+import { renderWithWrappers } from "@/utils/testUtils"
 
 describe("Notification", () => {
   let observable

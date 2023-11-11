@@ -1,6 +1,6 @@
 import { fireEvent, within } from "@testing-library/react"
 import Dropdown from "./Dropdown"
-import { renderWithWrappers } from "../../utils/testUtils"
+import { renderWithWrappers } from "@/utils/testUtils"
 
 const options = ["USD", "EUR", "JPY"]
 

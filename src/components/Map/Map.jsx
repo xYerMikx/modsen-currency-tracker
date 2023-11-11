@@ -4,6 +4,7 @@ import mapboxgl from "mapbox-gl"
 import axios from "axios"
 import { currenciesCodes } from "@/constants/currencies"
 import { mapConfig } from "@/constants/mapConfig"
+import { position } from "@/constants/coords"
 
 export class Map extends Component {
   constructor(props) {
@@ -51,13 +52,6 @@ export class Map extends Component {
 
         this.map.addControl(new mapboxgl.NavigationControl(), "top-right")
       }
-    }
-
-    const position = {
-      coords: {
-        latitude: 53.893009,
-        longitude: 27.567444,
-      },
     }
 
     getBanksMap(position)
