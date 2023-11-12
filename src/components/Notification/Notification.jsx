@@ -1,5 +1,7 @@
 import { Component } from "react"
 import { NotificationContainer } from "./styled"
+import PropTypes from "prop-types"
+import { Observer } from "@/services/observer"
 
 export class Notification extends Component {
   constructor(props) {
@@ -39,4 +41,8 @@ export class Notification extends Component {
       </NotificationContainer>
     )
   }
+}
+
+Notification.propTypes = {
+  observable: PropTypes.instanceOf(Observer).isRequired,
 }

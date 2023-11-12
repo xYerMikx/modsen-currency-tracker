@@ -5,6 +5,7 @@ import { chartConfig } from "./chart.config"
 import "chartjs-adapter-date-fns"
 import axios from "axios"
 import { ChartWrapper } from "./styled"
+import PropTypes from "prop-types"
 
 ChartJS.register(...registerables)
 
@@ -79,4 +80,17 @@ export class ChartComponent extends Component {
       </ChartWrapper>
     )
   }
+}
+
+ChartComponent.propTypes = {
+  formData: PropTypes.arrayOf(
+    PropTypes.shape({
+      x: PropTypes.number.isRequired,
+      o: PropTypes.number.isRequired,
+      h: PropTypes.number.isRequired,
+      l: PropTypes.number.isRequired,
+      c: PropTypes.number.isRequired,
+      s: PropTypes.arrayOf(PropTypes.number.isRequired),
+    }),
+  ).isRequired,
 }

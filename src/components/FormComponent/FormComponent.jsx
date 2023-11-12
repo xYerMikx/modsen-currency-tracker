@@ -10,6 +10,8 @@ import {
 } from "./styled"
 import { InputsList } from "../InputsList/InputsList"
 import { getRandomValue } from "@/utils/getRandomValue"
+import PropTypes from "prop-types"
+import { Observer } from "@/services/observer"
 
 export class FormComponent extends Component {
   constructor(props) {
@@ -115,4 +117,9 @@ export class FormComponent extends Component {
       </FormContainer>
     )
   }
+}
+
+FormComponent.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  observable: PropTypes.instanceOf(Observer).isRequired,
 }

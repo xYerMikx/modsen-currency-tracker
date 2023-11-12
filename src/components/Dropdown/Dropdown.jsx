@@ -9,6 +9,7 @@ import {
   Main,
 } from "./styled"
 import arrow from "@/assets/icons/arrow-down.svg"
+import PropTypes from "prop-types"
 
 export const Dropdown = ({ selectedOption, setSelectedOption, options }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -44,3 +45,9 @@ export const Dropdown = ({ selectedOption, setSelectedOption, options }) => {
 }
 
 export default Dropdown
+
+Dropdown.propTypes = {
+  selectedOption: PropTypes.string,
+  setSelectedOption: PropTypes.func,
+  options: PropTypes.arrayOf(PropTypes.string),
+}

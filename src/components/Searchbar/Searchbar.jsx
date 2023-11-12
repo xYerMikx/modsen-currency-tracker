@@ -9,6 +9,7 @@ import {
 } from "./styled"
 import search from "@/assets/icons/search.svg"
 import { currenciesCodes } from "@/constants/currencies"
+import PropTypes from "prop-types"
 
 export class Searchbar extends Component {
   constructor(props) {
@@ -70,4 +71,10 @@ export class Searchbar extends Component {
       </SearchContainer>
     )
   }
+}
+
+Searchbar.propTypes = {
+  value: PropTypes.string.isRequired,
+  setValue: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
 }

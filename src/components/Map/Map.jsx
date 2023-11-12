@@ -5,6 +5,7 @@ import axios from "axios"
 import { currenciesCodes } from "@/constants/currencies"
 import { mapConfig } from "@/constants/mapConfig"
 import { position } from "@/constants/coords"
+import PropTypes from "prop-types"
 
 export class Map extends Component {
   constructor(props) {
@@ -95,4 +96,8 @@ export class Map extends Component {
   render() {
     return <MapContainer data-cy="map-container" ref={this.mapContainer} />
   }
+}
+
+Map.propTypes = {
+  value: PropTypes.string.isRequired,
 }
