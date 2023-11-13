@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 
-import { media } from "../../constants/sizes"
+import { media } from "@/constants/sizes"
 
 export const FooterWrapper = styled.footer`
   background-color: ${(props) => props.theme.bgColor};
@@ -108,8 +108,10 @@ export const LinksContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
 
   @media ${media.desktop} {
     display: ${(props) => (props.isOpen ? "flex" : "none")};
+    margin-bottom: ${(props) => props.theme.spacings.sm};
   }
 `

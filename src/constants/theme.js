@@ -2,7 +2,6 @@ const commonTheme = {
   gradientColor:
     "-webkit-linear-gradient(90deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%)",
   orange: "#FF971D",
-  inputColor: "#1B2028",
   black: "#000000",
   spacings: {
     xxxs: "0.5rem",
@@ -38,6 +37,7 @@ const commonTheme = {
 }
 export const darkTheme = {
   ...commonTheme,
+  inputColor: "#1B2028",
   primaryColor: "#ffffff",
   secondaryColor: "#d9d9d9",
   darkColor: "#898989",
@@ -51,6 +51,7 @@ export const darkTheme = {
 }
 export const lightTheme = {
   ...commonTheme,
+  inputColor: "#f3f3f3",
   primaryColor: "#000000",
   secondaryColor: "#010101",
   darkColor: "#898989",

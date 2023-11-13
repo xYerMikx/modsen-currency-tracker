@@ -1,6 +1,5 @@
-import { render, fireEvent } from "@testing-library/react"
 import { InputsList } from "./InputsList"
-import { renderWithWrappers } from "../../utils/testUtils"
+import { renderWithWrappers } from "@/utils/testUtils"
 
 describe("InputsList", () => {
   let props

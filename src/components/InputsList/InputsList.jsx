@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { formInputs } from "@/constants/formInputs"
 import { FormInput } from "./styled"
+import PropTypes from "prop-types"
 
 export class InputsList extends Component {
   constructor(props) {
@@ -21,4 +22,11 @@ export class InputsList extends Component {
       )
     })
   }
+}
+
+InputsList.propTypes = {
+  indexWithPage: PropTypes.number.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  index: PropTypes.number.isRequired,
 }

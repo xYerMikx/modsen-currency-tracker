@@ -9,6 +9,9 @@ import {
   PageButton,
 } from "./styled"
 import { InputsList } from "../InputsList/InputsList"
+import { getRandomValue } from "@/utils/getRandomValue"
+import PropTypes from "prop-types"
+import { Observer } from "@/services/observer"
 
 export class FormComponent extends Component {
   constructor(props) {
@@ -16,11 +19,11 @@ export class FormComponent extends Component {
     this.state = {
       data: Array.from({ length: 30 }, () => ({
         x: 0,
-        o: this.getRandomValue(),
-        h: this.getRandomValue(),
-        l: this.getRandomValue(),
-        c: this.getRandomValue(),
-        s: [this.getRandomValue(), this.getRandomValue()],
+        o: getRandomValue(),
+        h: getRandomValue(),
+        l: getRandomValue(),
+        c: getRandomValue(),
+        s: [getRandomValue(), getRandomValue()],
       })),
       currentPage: 0,
     }
@@ -56,25 +59,16 @@ export class FormComponent extends Component {
     }))
   }
 
-  getRandomValue = (num) => {
-    if (num) {
-      const adjustment = Math.random() * 0.5 - 0.25
-      return (num + adjustment + 0.1).toFixed(3)
-    } else {
-      return (Math.random() + 0.5).toFixed(3)
-    }
-  }
-
   render() {
     const handleRandomize = () => {
       const newData = this.state.data.map(({ x }) => {
-        const o = this.getRandomValue()
-        const c = this.getRandomValue(Number(o))
+        const o = getRandomValue()
+        const c = getRandomValue(Number(o))
         return {
           x,
           o,
-          h: this.getRandomValue(),
-          l: this.getRandomValue(),
+          h: getRandomValue(),
+          l: getRandomValue(),
           c,
           s: [o, c],
         }
@@ -123,4 +117,9 @@ export class FormComponent extends Component {
       </FormContainer>
     )
   }
+}
+
+FormComponent.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  observable: PropTypes.instanceOf(Observer).isRequired,
 }

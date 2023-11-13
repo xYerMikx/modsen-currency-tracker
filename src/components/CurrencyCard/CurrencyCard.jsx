@@ -1,4 +1,5 @@
 import { Card } from "@/components/Card/Card"
+import PropTypes from "prop-types"
 
 export const CurrencyCard = ({
   imageSrc,
@@ -18,4 +19,13 @@ export const CurrencyCard = ({
       code={code}
     />
   )
+}
+
+CurrencyCard.propTypes = {
+  imageSrc: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  amount: PropTypes.string,
+  currency: PropTypes.string.isRequired,
+  isQuote: PropTypes.bool,
+  code: PropTypes.string,
 }

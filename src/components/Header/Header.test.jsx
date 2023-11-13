@@ -3,8 +3,6 @@ import { BrowserRouter as Router } from "react-router-dom"
 import { Header } from "./Header"
 import { renderWithWrappers } from "@/utils/testUtils"
 import { headerLinks } from "@/constants/headerLinks"
-import { renderWithRealStore } from "../../utils/testUtils"
-import store from "@/store"
 
 describe("Header tests", () => {
   it("should render logo", () => {

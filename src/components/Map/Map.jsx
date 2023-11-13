@@ -1,9 +1,11 @@
 import { Component, createRef } from "react"
 import { MapContainer } from "./styled"
 import mapboxgl from "mapbox-gl"
-import axios from "axios"
 import { currenciesCodes } from "@/constants/currencies"
 import { mapConfig } from "@/constants/mapConfig"
+import { position } from "@/constants/coords"
+import PropTypes from "prop-types"
+import { axios } from "@/services/axios"
 
 export class Map extends Component {
   constructor(props) {
@@ -53,13 +55,6 @@ export class Map extends Component {
       }
     }
 
-    const position = {
-      coords: {
-        latitude: 53.893009,
-        longitude: 27.567444,
-      },
-    }
-
     getBanksMap(position)
   }
 
@@ -101,4 +96,8 @@ export class Map extends Component {
   render() {
     return <MapContainer data-cy="map-container" ref={this.mapContainer} />
   }
+}
+
+Map.propTypes = {
+  value: PropTypes.string.isRequired,
 }

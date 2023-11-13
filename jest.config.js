@@ -4,7 +4,7 @@ module.exports = {
   testEnvironment: "jsdom",
   testRegex: "./src/.*\\.(test|spec)?\\.(js|jsx)$",
   moduleNameMapper: {
-    "\\.(jpg|jpeg|png|gif|webp|svg)$": "<rootDir>/__mocks__/fileMock.js",
+    "\\.(jpg|jpeg|png|gif|webp|svg)$": "<rootDir>/src/mocks/fileMock.js",
     "^@/(.*)": "<rootDir>/src/$1",
   },
   transform: {
