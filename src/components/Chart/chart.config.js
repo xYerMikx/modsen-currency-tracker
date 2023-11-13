@@ -4,13 +4,11 @@ const customData = {
       label: "Currency Chart",
       data: [],
       backgroundColor: (ctx) => {
-        const { c } = ctx.raw
-        const { o } = ctx.raw
+        const { c, o } = ctx.raw
         return c >= o ? "#16C782" : "#EA3943"
       },
       borderColor: (ctx) => {
-        const { c } = ctx.raw
-        const { o } = ctx.raw
+        const { c, o } = ctx.raw
         return c >= o ? "#11C712" : "#EF2443"
       },
       borderWidth: 2,
@@ -63,7 +61,6 @@ export const chartConfig = {
   type: "bar",
   data: customData,
   options: {
-    // maintainAspectRatio: false,
     aspectRatio: window.innerWidth <= 768 ? 1.25 : 2,
     parsing: {
       xAxisKey: "x",

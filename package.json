@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
-    "axios": "^1.5.1",
+    "axios": "^1",
+    "axios-cache-interceptor": "^1",
     "chart.js": "^4.4.0",
     "mapbox-gl": "^2.15.0",
     "prop-types": "^15.8.1",

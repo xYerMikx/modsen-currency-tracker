@@ -45,9 +45,6 @@ const renderWithWrappers = (ui, options) =>
 const renderWithRealStore = (ui, options) =>
   render(ui, { wrapper: ProdiverWithTheme(store), ...options })
 
-// re-export everything
 export * from "@testing-library/react"
-
-// override render method
 
 export { renderWithWrappers, renderWithRealStore }

@@ -9,9 +9,9 @@ import {
   ModalImage,
   ModalOverlay,
 } from "./styled"
-import axios from "axios"
 import { currenciesCodes } from "@/constants/currencies"
 import PropTypes from "prop-types"
+import { axios } from "@/services/axios"
 
 export const Modal = ({ onClose, name, imageSrc, code }) => {
   const currentOptions = currenciesCodes.filter((el) => el !== code)

@@ -1,11 +1,11 @@
 import { Component, createRef } from "react"
 import { MapContainer } from "./styled"
 import mapboxgl from "mapbox-gl"
-import axios from "axios"
 import { currenciesCodes } from "@/constants/currencies"
 import { mapConfig } from "@/constants/mapConfig"
 import { position } from "@/constants/coords"
 import PropTypes from "prop-types"
+import { axios } from "@/services/axios"
 
 export class Map extends Component {
   constructor(props) {

@@ -2,8 +2,8 @@ import { createRoot } from "react-dom/client"
 import { act, waitFor } from "@testing-library/react"
 import { Map } from "./Map"
 import mapboxgl from "mapbox-gl"
-import axios from "axios"
 import mockData from "@/mocks/data/mockBanks.json"
+import { axios } from "@/services/axios"
 
 jest.mock("mapbox-gl", () => ({
   Map: jest.fn(() => ({
@@ -25,14 +25,16 @@ jest.mock("mapbox-gl", () => ({
   })),
 }))
 
-jest.mock("axios", () => ({
-  get: jest.fn(() => Promise.resolve({ data: { features: [] } })),
-  CancelToken: {
-    source: jest.fn(() => ({
-      cancel: jest.fn(),
-    })),
+jest.mock("@/services/axios", () => ({
+  axios: {
+    get: jest.fn(() => Promise.resolve({ data: { features: [] } })),
+    CancelToken: {
+      source: jest.fn(() => ({
+        cancel: jest.fn(),
+      })),
+    },
+    isCancel: jest.fn(),
   },
-  isCancel: jest.fn(),
 }))
 
 let container = null

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import axios from "axios"
 import {
   BlockTitle,
   CurrencyWrapper,
@@ -13,6 +12,7 @@ import { StocksList } from "@/components/StocksList/StocksList"
 import { Dropdown } from "@/components/Dropdown/Dropdown"
 import { CurrencyList } from "@/components/CurrencyList/CurrencyList"
 import { options } from "@/constants/dropdownOptions"
+import { axios } from "@/services/axios"
 
 export const CurrencySection = () => {
   const [values, setValues] = useState([])

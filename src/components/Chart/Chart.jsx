@@ -3,9 +3,9 @@ import { Chart as ChartJS, registerables } from "chart.js"
 import { Chart } from "react-chartjs-2"
 import { chartConfig } from "./chart.config"
 import "chartjs-adapter-date-fns"
-import axios from "axios"
 import { ChartWrapper } from "./styled"
 import PropTypes from "prop-types"
+import { axios } from "@/services/axios"
 
 ChartJS.register(...registerables)
 
