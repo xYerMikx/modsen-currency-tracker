@@ -7,6 +7,7 @@ import { Wrapper } from "@/components/Wrapper/Wrapper"
 import { Footer } from "@/components/Footer/Footer"
 import { useSelector } from "react-redux"
 import { Hero } from "@/components/Hero/Hero"
+import { routes } from "../../constants/routes"
 
 export const App = () => {
   const currentTheme = useSelector((state) => state.theme)
@@ -18,7 +19,7 @@ export const App = () => {
           <Header />
           <Hero />
           <Routes>
-            {headerLinks.map(({ element, to }, index) => {
+            {routes.map(({ element, to }, index) => {
               return <Route key={index} element={element} path={to} />
             })}
           </Routes>

@@ -48,8 +48,10 @@ export const Footer = () => {
             <LinkBlock key={title}>
               <LinkBlockTitle onClick={toggleLinks(index)}>{title}</LinkBlockTitle>
               <LinksContainer isOpen={isOpen === index}>
-                {links.map((link, index) => (
-                  <FooterLink key={index}>{link}</FooterLink>
+                {links.map(({ name, to }, index) => (
+                  <FooterLink to={to} key={index}>
+                    {name}
+                  </FooterLink>
                 ))}
               </LinksContainer>
             </LinkBlock>

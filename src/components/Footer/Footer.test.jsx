@@ -28,8 +28,8 @@ describe("Footer tests", () => {
     ({ title, links }) => {
       expect(screen.getByText(title)).toBeInTheDocument()
 
-      links.forEach((link) => {
-        expect(screen.getByText(link)).toBeInTheDocument()
+      links.forEach(({ name }) => {
+        expect(screen.getByText(name)).toBeInTheDocument()
       })
     },
   )

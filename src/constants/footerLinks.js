@@ -1,14 +1,23 @@
 export const footerLinks = [
   {
     title: "General",
-    links: ["Market", "Service"],
+    links: [
+      { name: "Market", to: "/market" },
+      { name: "Service", to: "/service" },
+    ],
   },
   {
     title: "Product",
-    links: ["Sparks", "Snaps"],
+    links: [
+      { name: "Sparks", to: "/sparks" },
+      { name: "Snaps", to: "/snaps" },
+    ],
   },
   {
     title: "Community",
-    links: ["Ideas", "Streams"],
+    links: [
+      { name: "Ideas", to: "/ideas" },
+      { name: "Streams", to: "/streams" },
+    ],
   },
 ]
