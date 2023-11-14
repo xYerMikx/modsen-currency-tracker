@@ -6,6 +6,7 @@ import {
   Flex,
   LinksWrapper,
   ProfileImage,
+  StyledLi,
 } from "./styled"
 import profile from "@/assets/images/profile.jpg"
 
@@ -17,11 +18,11 @@ export const Contacts = () => {
         <LinksWrapper>
           {contactsLinks.map(({ link, name }) => {
             return (
-              <li key={link}>
+              <StyledLi key={link}>
                 <ContactsLink href={link} target="blank">
                   {name}
                 </ContactsLink>
-              </li>
+              </StyledLi>
             )
           })}
         </LinksWrapper>

@@ -4,6 +4,7 @@ import {
   Input,
   Label,
   LinksList,
+  StyledLi,
   StyledLink,
   Switch,
 } from "./styled"
@@ -13,6 +14,7 @@ import { headerLinks } from "@/constants/headerLinks"
 import { Logo } from "@/components/Logo/Logo"
 import { useDispatch } from "react-redux"
 import { setTheme } from "@/store/slices/themeSlice"
+import { getRoute } from "../../constants/routes"
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -38,15 +40,15 @@ export const Header = () => {
 
   return (
     <HeaderWrapper>
-      <Link to="/">
+      <Link to={getRoute("home")}>
         <Logo />
       </Link>
       <LinksList isOpen={isOpen}>
         {headerLinks.map(({ to, name }, index) => {
           return (
-            <li key={index} onClick={toggleMenu}>
-              <StyledLink to={to}>{name}</StyledLink>
-            </li>
+            <StyledLi key={index} onClick={toggleMenu}>
+              <StyledLink to={getRoute(to)}>{name}</StyledLink>
+            </StyledLi>
           )
         })}
       </LinksList>

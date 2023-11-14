@@ -11,17 +11,17 @@ export class BankCard extends Component {
     }
   }
 
-  setValue = (newValue) => {
-    this.setState((prevState) => ({ ...prevState, value: newValue }))
-  }
-
   render() {
     const { value } = this.state
+    const setValue = (newValue) => {
+      this.setState((prevState) => ({ ...prevState, value: newValue }))
+    }
+
     return (
       <BankContainer>
         <BankWrapper>
           <Title>Search currency in the bank</Title>
-          <Searchbar value={value} setValue={this.setValue} />
+          <Searchbar value={value} setValue={setValue} />
         </BankWrapper>
         <Map value={value} />
       </BankContainer>

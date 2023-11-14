@@ -6,6 +6,7 @@ import {
   Label,
   SearchList,
   SearchItem,
+  StyledImage,
 } from "./styled"
 import search from "@/assets/icons/search.svg"
 import { currenciesCodes } from "@/constants/currencies"
@@ -18,44 +19,43 @@ export class Searchbar extends Component {
     this.state = { isOpen: false }
   }
 
-  focusTextInput = () => {
-    this.inputRef.current.focus()
-  }
-
-  handleCurrencyClick = (e) => {
-    const { setValue } = this.props
-    const value = e.target.textContent
-    setValue(value)
-    this.setState((prevState) => ({ ...prevState, isOpen: false }))
-  }
-
-  handleChange = (e) => {
-    const { setValue } = this.props
-    const newValue = e.target.value
-    setValue(newValue)
-  }
-
-  handleInputClick = () => {
-    this.setState((prevState) => ({ ...prevState, isOpen: true }))
-  }
-
   render() {
     const { value } = this.props
     const { isOpen } = this.state
+
+    const focusTextInput = () => {
+      this.inputRef.current.focus()
+    }
+
+    const handleCurrencyClick = (e) => {
+      const { setValue } = this.props
+      const value = e.target.textContent
+      setValue(value)
+      this.setState((prevState) => ({ ...prevState, isOpen: false }))
+    }
+    const handleChange = (e) => {
+      const { setValue } = this.props
+      const newValue = e.target.value
+      setValue(newValue)
+    }
+    const handleInputClick = () => {
+      this.setState((prevState) => ({ ...prevState, isOpen: true }))
+    }
     return (
       <SearchContainer>
         <Label htmlFor="search">
           <SearchInput
             id="search"
             ref={this.inputRef}
-            onChange={this.handleChange}
-            onClick={this.handleInputClick}
+            onChange={handleChange}
+            onClick={handleInputClick}
             value={value}
             placeholder="Currency search..."
+            autoComplete="off"
           />
         </Label>
-        <IconButton onClick={this.focusTextInput}>
-          <img src={search} alt="search icon" />
+        <IconButton onClick={focusTextInput}>
+          <StyledImage src={search} alt="search icon" />
         </IconButton>
         <SearchList>
           {value.length > 0 &&
@@ -63,7 +63,7 @@ export class Searchbar extends Component {
             currenciesCodes
               .filter((code) => code.toLowerCase().includes(value.toLowerCase()))
               .map((code) => (
-                <SearchItem onClick={this.handleCurrencyClick} key={code}>
+                <SearchItem onClick={handleCurrencyClick} key={code}>
                   {code}
                 </SearchItem>
               ))}

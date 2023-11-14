@@ -3,6 +3,7 @@ import { Component } from "react"
 import {
   ButtonContainer,
   DayContainer,
+  DayName,
   FormButton,
   FormContainer,
   InputsContainer,
@@ -42,24 +43,22 @@ export class FormComponent extends Component {
     getData()
   }
 
-  handleInputChange = (index, field) => (event) => {
-    const value = event.target.value
-    const newData = [...this.state.data]
-    newData[index][field] = +value
-    if (field === "o" || field === "c") {
-      newData[index].s = [newData[index].o, newData[index].c]
-    }
-    this.setState({ data: newData })
-  }
-
-  handlePageChange = (pageNumber) => () => {
-    this.setState((prevState) => ({
-      ...prevState,
-      currentPage: pageNumber,
-    }))
-  }
-
   render() {
+    const handleInputChange = (index, field) => (event) => {
+      const value = event.target.value
+      const newData = [...this.state.data]
+      newData[index][field] = +value
+      if (field === "o" || field === "c") {
+        newData[index].s = [newData[index].o, newData[index].c]
+      }
+      this.setState({ data: newData })
+    }
+    const handlePageChange = (pageNumber) => () => {
+      this.setState((prevState) => ({
+        ...prevState,
+        currentPage: pageNumber,
+      }))
+    }
     const handleRandomize = () => {
       const newData = this.state.data.map(({ x }) => {
         const o = getRandomValue()
@@ -89,11 +88,11 @@ export class FormComponent extends Component {
         <InputsContainer>
           {this.state.data.slice(startIndex, endIndex).map((_, index) => (
             <DayContainer key={index}>
-              <h3>Day {startIndex + index + 1}</h3>
+              <DayName>Day {startIndex + index + 1}</DayName>
               <InputsList
                 data={this.state.data}
                 indexWithPage={this.state.currentPage * itemsPerPage + index}
-                handleChange={this.handleInputChange}
+                handleChange={handleInputChange}
                 index={index}
               />
             </DayContainer>
@@ -105,7 +104,7 @@ export class FormComponent extends Component {
               <PageButton
                 data-testid="page-button"
                 key={el}
-                onClick={this.handlePageChange(el - 1)}
+                onClick={handlePageChange(el - 1)}
               >
                 {el}
               </PageButton>

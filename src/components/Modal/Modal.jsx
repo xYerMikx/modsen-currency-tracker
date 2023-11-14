@@ -4,10 +4,14 @@ import {
   ConversionInput,
   ConversionSelect,
   ConversionWrapper,
+  ConvertedValue,
   InfoWrapper,
   ModalBox,
   ModalImage,
+  ModalOption,
   ModalOverlay,
+  StyledDiv,
+  StyledParagraph,
 } from "./styled"
 import { currenciesCodes } from "@/constants/currencies"
 import PropTypes from "prop-types"
@@ -53,7 +57,7 @@ export const Modal = ({ onClose, name, imageSrc, code }) => {
       <ModalBox data-testid="modal" data-cy="modal">
         <InfoWrapper>
           <ModalImage src={imageSrc} />
-          <p>{name}</p>
+          <StyledParagraph>{name}</StyledParagraph>
         </InfoWrapper>
         <ConversionWrapper>
           <ConversionInput
@@ -62,23 +66,23 @@ export const Modal = ({ onClose, name, imageSrc, code }) => {
             value={baseValueAmount}
             onChange={changeValueAmount}
           />
-          <p>=</p>
-          <div>
-            <span data-cy="converted-value">{convertedValue}</span>
+          <StyledParagraph>=</StyledParagraph>
+          <StyledDiv>
+            <ConvertedValue data-cy="converted-value">{convertedValue}</ConvertedValue>
             <ConversionSelect
               data-testid="conversion-select"
               value={selectedBase || "USD"}
               onChange={onSelectChange}
             >
-              {currentOptions.map((el) => {
+              {currentOptions.map((option) => {
                 return (
-                  <option value={el} key={el}>
-                    {el}
-                  </option>
+                  <ModalOption value={option} key={option}>
+                    {option}
+                  </ModalOption>
                 )
               })}
             </ConversionSelect>
-          </div>
+          </StyledDiv>
         </ConversionWrapper>
         <CloseButton data-cy="close-button" data-testid="close-button" onClick={onClose}>
           Close

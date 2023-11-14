@@ -51,6 +51,7 @@ export const PageButton = styled.button`
   }
 `
 
+export const DayName = styled.h3``
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;

@@ -26,6 +26,11 @@ export const ModalBox = styled.div`
   }
 `
 
+export const ModalOption = styled.option``
+export const ConvertedValue = styled.span``
+export const StyledParagraph = styled.p``
+export const StyledDiv = styled.div``
+
 export const CloseButton = styled.div`
   cursor: pointer;
   max-width: 15rem;

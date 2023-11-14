@@ -15,6 +15,8 @@ export const HeaderWrapper = styled.header`
   }
 `
 
+export const StyledLi = styled.li``
+
 export const LinksList = styled.ul`
   display: flex;
   align-items: center;
