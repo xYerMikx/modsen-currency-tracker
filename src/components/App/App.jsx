@@ -8,6 +8,7 @@ import { useSelector } from "react-redux"
 import { Hero } from "@/components/Hero/Hero"
 import { routes } from "@/constants/routes"
 import { themeSelector } from "@/store/selectors"
+import { ScrollToTop } from "@/utils/scrollToTop"
 
 export const App = () => {
   const currentTheme = useSelector(themeSelector)
@@ -15,6 +16,7 @@ export const App = () => {
   return (
     <ThemeProvider theme={currentTheme.theme === "dark" ? darkTheme : lightTheme}>
       <BrowserRouter>
+        <ScrollToTop />
         <Wrapper>
           <Header />
           <Hero />
