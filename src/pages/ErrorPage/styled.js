@@ -15,6 +15,9 @@ export const ErrorWrapper = styled.main`
   }
 `
 
+export const StyledTitle = styled.h1``
+export const StyledSubtitle = styled.h2``
+
 export const StyledLink = styled(Link)`
   display: block;
   font-size: ${(props) => props.theme.fontSize.md};

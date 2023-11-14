@@ -36,6 +36,8 @@ export const LinksWrapper = styled.ul`
   }
 `
 
+export const StyledLi = styled.li``
+
 export const ProfileImage = styled.img`
   border-radius: ${(props) => props.theme.borderRadius};
   width: 15rem;

@@ -38,6 +38,8 @@ export const SearchInput = styled.input`
   background-color: ${(props) => props.theme.inputColor};
 `
 
+export const StyledImage = styled.img``
+
 export const IconButton = styled.button`
   position: relative;
   height: 3.6rem;

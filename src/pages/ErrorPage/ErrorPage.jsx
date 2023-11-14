@@ -1,11 +1,9 @@
-import { ErrorWrapper, StyledLink } from "./styled"
+import { ErrorWrapper, StyledLink, StyledSubtitle, StyledTitle } from "./styled"
 
 export const ErrorPage = () => (
   <ErrorWrapper>
-    <div>
-      <h1>Something went wrong...</h1>
-      <h2>This page doesn't exist</h2>
-      <StyledLink to="/">Go back to home page</StyledLink>
-    </div>
+    <StyledTitle>Something went wrong...</StyledTitle>
+    <StyledSubtitle>This page doesn't exist</StyledSubtitle>
+    <StyledLink to="/">Go back to home page</StyledLink>
   </ErrorWrapper>
 )

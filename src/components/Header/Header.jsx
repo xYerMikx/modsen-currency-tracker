@@ -4,6 +4,7 @@ import {
   Input,
   Label,
   LinksList,
+  StyledLi,
   StyledLink,
   Switch,
 } from "./styled"
@@ -44,9 +45,9 @@ export const Header = () => {
       <LinksList isOpen={isOpen}>
         {headerLinks.map(({ to, name }, index) => {
           return (
-            <li key={index} onClick={toggleMenu}>
+            <StyledLi key={index} onClick={toggleMenu}>
               <StyledLink to={to}>{name}</StyledLink>
-            </li>
+            </StyledLi>
           )
         })}
       </LinksList>
