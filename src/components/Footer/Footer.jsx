@@ -16,6 +16,7 @@ import { Logo } from "@/components/Logo/Logo"
 import { footerLinks } from "@/constants/footerLinks"
 import { GradientText } from "@/components/GradientText/GradientText"
 import { Link } from "react-router-dom"
+import { getRoute } from "@/constants/routes"
 
 export const Footer = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,7 +32,7 @@ export const Footer = () => {
     <FooterWrapper>
       <Container>
         <FooterInfo>
-          <Link to="/">
+          <Link to={getRoute("home")}>
             <Logo />
           </Link>
           <FooterText>
@@ -48,8 +49,8 @@ export const Footer = () => {
             <LinkBlock key={title}>
               <LinkBlockTitle onClick={toggleLinks(index)}>{title}</LinkBlockTitle>
               <LinksContainer isOpen={isOpen === index}>
-                {links.map(({ name, to }, index) => (
-                  <FooterLink to={to} key={index}>
+                {links.map(({ name }, index) => (
+                  <FooterLink to={getRoute(name.toLowerCase())} key={index}>
                     {name}
                   </FooterLink>
                 ))}
